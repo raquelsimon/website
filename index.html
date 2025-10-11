@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raquel Simon Studio - Fisioterapia e Pilates</title>
+    <meta name="description" content="Raquel Simon Studio: Abordagens integradas de fisioterapia, pilates e terapias manuais para uma saúde plena.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-background-light text-text-dark font-sans leading-relaxed">
+
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#inicio" class="flex items-center">
+                <img src="https://r2.flowith.net/files/a31513d0-73b2-43d9-bfd8-7741efbc9c0f/AUUOA-raquel_pilates_-_logo@2000x1051.png" alt="Logotipo Raquel Simon Studio" class="h-12 md:h-14 w-auto">
+            </a>
+
+            <nav class="hidden lg:flex items-center space-x-10">
+                <a href="#inicio" class="nav-link">Início</a>
+                <a href="#sobre" class="nav-link">Sobre</a>
+                <a href="#servicos" class="nav-link">Serviços</a>
+            </nav>
+
+            <button id="mobile-menu-button" class="lg:hidden focus:outline-none">
+                <i data-lucide="menu" class="w-8 h-8"></i>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="hidden lg:hidden bg-white text-text-dark">
+            <nav class="flex flex-col items-center space-y-6 py-8">
+                <a href="#inicio" class="nav-link text-lg">Início</a>
+                <a href="#sobre" class="nav-link text-lg">Sobre</a>
+                <a href="#servicos" class="nav-link text-lg">Serviços</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="min-h-screen flex items-center bg-cover bg-center" style="background-image: url('https://kit.baliniz.com/yogist/wp-content/uploads/sites/13/elementor/thumbs/group-of-people-meditating-in-yoga-class-pl19ttxub3ws87ioau4j2mkjua0yjtcbwb983a9t00.jpg');">
+            <div class="absolute inset-0 bg-black/30"></div>
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <div class="animated-section">
+                    <h1 class="font-serif text-5xl md:text-7xl font-bold text-white leading-tight mb-6">
+                        Recupere sua qualidade de vida e bem-estar.
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-3xl mx-auto">
+                        Abordagens integradas de fisioterapia, pilates e terapias manuais para uma saúde plena.
+                    </p>
+                    <!-- TODO: Substituir o número de telefone no link abaixo pelo número real do cliente -->
+                    <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" class="bg-primary text-white px-10 py-4 rounded-md hover:bg-secondary transition-colors duration-300 font-bold text-base tracking-wider uppercase">
+                        Agende sua Avaliação
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="py-24 md:py-32">
+            <div class="animated-section container mx-auto px-6">
+                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+                    <div class="relative">
+                         <div class="w-full h-full bg-primary/10 rounded-2xl absolute -bottom-4 -right-4 transform rotate-2"></div>
+                         <img src="https://r2.flowith.net/files/a31513d0-73b2-43d9-bfd8-7741efbc9c0f/QW2OP-raquel_simon@900x1600.jpg" alt="Foto de Raquel Simon" class="relative z-10 w-full h-auto object-cover rounded-2xl shadow-xl">
+                    </div>
+                    <div>
+                        <h2 class="font-serif text-4xl md:text-5xl font-bold text-text-dark mb-6">Mais de 8 anos dedicados à sua saúde e bem-estar.</h2>
+                        <div class="space-y-4 text-gray-600 text-lg">
+                           <p>Raquel Simon, fisioterapeuta com mais de 8 anos de experiência na área da saúde. Desde a minha formação, sempre fui apaixonada por ajudar as pessoas a recuperarem sua qualidade de vida, aliviando dores e promovendo o bem-estar.</p>
+                           <p>Ao longo da minha trajetória, me especializei em diversas áreas e utilizo técnicas modernas e personalizadas para cada paciente.</p>
+                           <blockquote class="quote my-6">
+                               "Meu objetivo é proporcionar um atendimento humanizado e eficiente, sempre focando na melhora da sua qualidade de vida."
+                           </blockquote>
+                        </div>
+                        <div class="mt-8">
+                             <a href="#servicos" class="font-bold text-primary hover:text-secondary transition-colors duration-300 text-lg">Conheça as especialidades &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="py-24 md:py-32 bg-white">
+            <div class="animated-section container mx-auto px-6">
+                <div class="text-center mb-16 max-w-3xl mx-auto">
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-text-dark mb-4">Uma Abordagem Completa para sua Saúde</h2>
+                    <p class="text-lg text-gray-600">Oferecemos uma abordagem integrada para sua saúde, combinando técnicas consagradas e modernas para garantir sua recuperação e bem-estar.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="service-card text-center p-8 rounded-2xl border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+                        <div class="inline-block bg-primary/10 text-primary p-4 rounded-full mb-6"><i data-lucide="heart-pulse" class="w-10 h-10"></i></div>
+                        <h3 class="text-2xl font-bold font-serif text-text-dark mb-3">Fisioterapia</h3>
+                        <p class="text-gray-600">Tratamento e prevenção de lesões musculoesqueléticas, focando na causa para restaurar sua mobilidade sem dor.</p>
+                    </div>
+                    <div class="service-card text-center p-8 rounded-2xl border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+                        <div class="inline-block bg-primary/10 text-primary p-4 rounded-full mb-6"><i data-lucide="move" class="w-10 h-10"></i></div>
+                        <h3 class="text-2xl font-bold font-serif text-text-dark mb-3">Pilates</h3>
+                        <p class="text-gray-600">Fortalecimento do core, melhora da postura e aumento da flexibilidade com acompanhamento individualizado.</p>
+                    </div>
+                    <div class="service-card text-center p-8 rounded-2xl border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+                        <div class="inline-block bg-primary/10 text-primary p-4 rounded-full mb-6"><i data-lucide="target" class="w-10 h-10"></i></div>
+                        <h3 class="text-2xl font-bold font-serif text-text-dark mb-3">Acupuntura</h3>
+                        <p class="text-gray-600">Técnica para manejo de dores, redução do estresse e ansiedade, promovendo bem-estar físico e mental.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="py-24 md:py-32 bg-primary/5">
+             <div class="animated-section container mx-auto px-6">
+                <div class="text-center mb-16 max-w-3xl mx-auto">
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-text-dark mb-4">O que meus pacientes dizem</h2>
+                    <p class="text-lg text-gray-600">A confiança e os resultados dos meus pacientes são minha maior motivação.</p>
+                </div>
+                <div class="testimonial-slider relative max-w-3xl mx-auto text-center">
+                    <div class="testimonial-item hidden opacity-0 transition-opacity duration-1000 ease-in-out">
+                         <img src="https://kit.baliniz.com/yogist/wp-content/uploads/sites/13/2022/03/SZA2GUP-300x300.jpg" alt="Foto do Paciente" class="w-24 h-24 rounded-full mx-auto mb-6 shadow-lg">
+                         <p class="text-xl italic text-gray-700 mb-6">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+                         <h4 class="font-bold text-lg text-primary">Eva Dupont</h4>
+                         <p class="text-gray-500">Gerente de RH</p>
+                    </div>
+                     <div class="testimonial-item hidden opacity-0 transition-opacity duration-1000 ease-in-out">
+                         <img src="https://kit.baliniz.com/yogist/wp-content/uploads/sites/13/2022/03/DMXD9EQ-300x300.jpg" alt="Foto do Paciente" class="w-24 h-24 rounded-full mx-auto mb-6 shadow-lg">
+                         <p class="text-xl italic text-gray-700 mb-6">"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+                         <h4 class="font-bold text-lg text-primary">Nils Winter</h4>
+                         <p class="text-gray-500">Empreendedor</p>
+                    </div>
+                     <div class="testimonial-item hidden opacity-0 transition-opacity duration-1000 ease-in-out">
+                         <img src="https://kit.baliniz.com/yogist/wp-content/uploads/sites/13/2022/03/CMGT8SZ-300x300.jpg" alt="Foto do Paciente" class="w-24 h-24 rounded-full mx-auto mb-6 shadow-lg">
+                         <p class="text-xl italic text-gray-700 mb-6">"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."</p>
+                         <h4 class="font-bold text-lg text-primary">Felicity Chan</h4>
+                         <p class="text-gray-500">Designer</p>
+                    </div>
+                </div>
+             </div>
+        </section>
+
+        <section id="contato" class="py-24 md:py-32 bg-white">
+            <div class="animated-section container mx-auto px-6">
+                 <div class="text-center mb-16 max-w-3xl mx-auto">
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-text-dark mb-4">Dê o primeiro passo para uma vida sem dor.</h2>
+                    <p class="text-lg text-gray-600">Entre em contato pelo WhatsApp e vamos juntos construir um plano de tratamento para suas necessidades.</p>
+                </div>
+                <div class="max-w-2xl mx-auto bg-background-light p-8 md:p-12 rounded-2xl">
+                    <div>
+                        <h3 class="font-serif text-3xl font-bold text-text-dark mb-6">Informações</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start"><i data-lucide="map-pin" class="w-6 h-6 text-primary mt-1 mr-4 shrink-0"></i><div><h4 class="font-bold">Endereço</h4><p class="text-gray-600">[Seu endereço completo aqui]</p></div></div>
+                            <div class="flex items-start"><i data-lucide="phone" class="w-6 h-6 text-primary mt-1 mr-4 shrink-0"></i><div><h4 class="font-bold">Telefone / WhatsApp</h4><p class="text-gray-600">[Seu Telefone aqui]</p></div></div>
+                            <div class="flex items-start"><i data-lucide="clock" class="w-6 h-6 text-primary mt-1 mr-4 shrink-0"></i><div><h4 class="font-bold">Horário</h4><p class="text-gray-600">Segunda a Sexta: 08:00 - 19:00</p></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-background-dark text-gray-300">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div>
+                    <img src="https://r2.flowith.net/files/a31513d0-73b2-43d9-bfd8-7741efbc9c0f/AUUOA-raquel_pilates_-_logo@2000x1051.png" alt="Logotipo Raquel Simon Studio" class="h-14 w-auto mb-4">
+                    <p class="text-gray-400">Recuperando sua qualidade de vida e bem-estar através do movimento consciente.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white text-lg mb-4 tracking-wider">Links Rápidos</h4>
+                    <nav class="flex flex-col space-y-3">
+                        <a href="#inicio" class="text-gray-400 hover:text-white transition-colors">Início</a>
+                        <a href="#sobre" class="text-gray-400 hover:text-white transition-colors">Sobre</a>
+                        <a href="#servicos" class="text-gray-400 hover:text-white transition-colors">Serviços</a>
+                    </nav>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white text-lg mb-4 tracking-wider">Contato</h4>
+                    <div class="space-y-3 text-gray-400">
+                        <p class="flex items-start"><i data-lucide="map-pin" class="w-5 h-5 mr-3 mt-1 shrink-0"></i> [Seu endereço]</p>
+                        <p class="flex items-start"><i data-lucide="phone" class="w-5 h-5 mr-3 mt-1 shrink-0"></i> [Seu Telefone aqui]</p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white text-lg mb-4 tracking-wider">Siga-nos</h4>
+                     <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="facebook" class="w-6 h-6"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="youtube" class="w-6 h-6"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-16 border-t border-gray-800 pt-8 text-center text-gray-500">
+                <p>&copy; 2025 Raquel Simon Studio. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Icon -->
+    <!-- TODO: Substituir o número de telefone no link abaixo pelo número real do cliente -->
+    <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" title="Fale conosco pelo WhatsApp" class="fixed bottom-6 right-6 bg-primary text-white p-4 rounded-full shadow-lg hover:bg-secondary transition-transform duration-300 hover:scale-110 z-50 flex items-center justify-center">
+        <svg fill="currentColor" viewBox="0 0 24 24" class="w-8 h-8">
+            <path d="M16.75,13.96C17,14.21,17.21,14.5,17.2,14.86C17.2,15.22,17.1,15.5,17,15.76C16.8,16.27,16.26,16.64,15.79,16.76C15.32,16.88,14.63,17,12.45,16.1C10.15,15.11,8.61,13.5,7.76,12.23C7.22,11.5,7,10.64,7.28,10.03C7.53,9.45,7.95,9.13,8.4,8.9C8.85,8.68,9.15,8.67,9.39,8.95C9.62,9.23,9.86,9.58,10.05,9.85C10.23,10.13,10.26,10.27,10.16,10.45C10.06,10.63,9.68,11.09,9.37,11.45C9.06,11.8,8.81,12,9.06,12.3C9.3,12.6,9.91,13.25,10.5,13.73C11.5,14.54,12.21,14.74,12.56,14.86C12.91,14.98,13.11,14.93,13.3,14.67C13.5,14.42,14.04,13.67,14.26,13.37C14.47,13.07,14.7,12.96,14.95,13.06C15.2,13.16,16.23,13.71,16.5,13.83C16.77,13.95,16.89,14,16.75,13.96M12,2A10,10,0,0,0,2,12A10,10,0,0,0,12,22C13.66,22,15.25,21.5,16.63,20.6L22,22L20.5,16.75C21.5,15.3,22,13.7,22,12A10,10,0,0,0,12,2Z"></path>
+        </svg>
+    </a>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
