@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Studio Raquel Simon | Pilates, Yoga e Fisioterapia em Cosmópolis</title>
 <meta name="description" content="Studio de Pilates e Fisioterapia em Cosmópolis. Fisioterapia, Pilates, Yoga presencial e online, Acupuntura, Laserterapia e Massagem com a fisioterapeuta Raquel Simon. Agende sua avaliação pelo WhatsApp.">
 <meta property="og:title" content="Studio Raquel Simon | Pilates, Yoga e Fisioterapia">
@@ -12,7 +12,7 @@
 <link rel="icon" href="assets/lotus.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/alegreya-sans-800-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/alegreya-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/img/hero-studio.webp" as="image" type="image/webp">
+<link rel="preload" href="assets/img/studio-wide.webp" as="image" type="image/webp">
 <script>document.documentElement.classList.add('js')</script>
 <style>
 @font-face{font-family:'Alegreya Sans';font-style:italic;font-weight:400;font-display:swap;src:url(assets/fonts/alegreya-sans-400i-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
@@ -36,71 +36,65 @@
   --lilac:#C6C1E9;     /* fundo das artes do Instagram */
   --lilac-soft:#EEECF8;
   --paper:#FCFBFE;
+  --night:#2a1944;
   --ink:#2B1F3D;
   --muted:#5E5270;
   --line:rgba(64,38,101,.14);
   --ease-out:cubic-bezier(.23,1,.32,1);
   --ease-io:cubic-bezier(.77,0,.175,1);
-  --r:18px;
+  --r:22px;
   --header:72px;
-  --pad:clamp(56px,6vw,88px);
+  --pad:clamp(20px,5vw,40px);
+  --sec:clamp(96px,11vw,150px);
 }
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header) + 8px);-webkit-text-size-adjust:100%}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:'Alegreya Sans',system-ui,sans-serif;font-size:19px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+html{scroll-padding-top:calc(var(--header) + 8px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Alegreya Sans',system-ui,sans-serif;font-size:19px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit}
-h1,h2,h3{margin:0;font-weight:800;line-height:1.08;letter-spacing:-.015em;color:var(--deep);text-wrap:balance}
-p{margin:0}
-.wrap{width:100%;max-width:1200px;margin-inline:auto;padding-inline:clamp(20px,5vw,40px)}
-.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+h1,h2,h3{margin:0;font-weight:800;line-height:1.04;letter-spacing:-.02em;color:var(--deep);text-wrap:balance}
+p,figure,blockquote{margin:0}
+.wrap{width:100%;max-width:1240px;margin-inline:auto;padding-inline:var(--pad)}
 :focus-visible{outline:3px solid var(--orchid);outline-offset:3px;border-radius:6px}
 
+/* rótulo de seção: traço que cresce + nome */
+.tag{display:flex;align-items:center;gap:12px;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--orchid-ink);margin-bottom:18px}
+.tag::before{content:"";width:34px;height:2px;border-radius:2px;background:currentColor;transform-origin:left;transition:transform 900ms var(--ease-out) 150ms}
+.js .tag.rv::before{transform:scaleX(0)}
+.js .tag.rv.in::before{transform:none}
+.on-dark .tag{color:var(--lilac)}
+
 /* ---------- botões ---------- */
-.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;background:var(--deep);color:var(--cream);font-weight:700;font-size:18px;text-decoration:none;white-space:nowrap;transition:transform 160ms var(--ease-out),background-color 200ms ease}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:54px;padding:0 28px;border-radius:999px;background:var(--deep);color:var(--cream);font-weight:700;font-size:18px;text-decoration:none;white-space:nowrap;transition:transform 200ms var(--ease-out),background-color 200ms ease,color 200ms ease,box-shadow 200ms ease}
 .btn svg{width:20px;height:20px;flex:none}
 .btn:active{transform:scale(.97)}
 .btn--ghost{background:transparent;color:var(--deep);box-shadow:inset 0 0 0 2px var(--deep)}
+.btn--cream{background:var(--cream);color:var(--deep)}
 @media (hover:hover) and (pointer:fine){
-  .btn:hover{background:#523380}
+  .btn:hover{background:#523380;transform:translateY(-2px)}
   .btn--ghost:hover{background:var(--lilac-soft)}
+  .btn--cream:hover{background:#fff}
 }
 
 /* ---------- header ---------- */
-.top-sentinel{position:absolute;top:0;height:8px;width:1px}
-.site-header{position:sticky;top:0;z-index:50;height:var(--header);background:var(--paper);transition:box-shadow 200ms ease}
-.site-header.is-scrolled{box-shadow:0 1px 0 var(--line),0 8px 24px -16px rgba(64,38,101,.35)}
+.site-header{position:fixed;inset:0 0 auto;z-index:50;height:var(--header);background:rgba(252,251,254,.0);transition:background-color 300ms ease,box-shadow 300ms ease,backdrop-filter 300ms ease}
+.site-header.solid{background:rgba(252,251,254,.88);backdrop-filter:blur(14px) saturate(1.2);-webkit-backdrop-filter:blur(14px) saturate(1.2);box-shadow:0 1px 0 var(--line)}
 .site-header .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.brand img{width:52px;height:auto}
+.brand img{width:50px;height:auto}
 .brand b{display:block;font-size:24px;font-weight:700;color:var(--deep);line-height:1}
 .brand small{display:block;font-size:13px;color:var(--orchid-ink);line-height:1.2;margin-top:3px}
 .nav{display:flex;align-items:center;gap:30px}
-.nav a{font-weight:500;font-size:18px;text-decoration:none;color:var(--ink);padding:6px 0;background:linear-gradient(var(--orchid),var(--orchid)) 0 100%/0 2px no-repeat;transition:background-size 250ms var(--ease-out)}
+.nav a{font-weight:500;font-size:18px;text-decoration:none;color:var(--ink);padding:6px 0;background:linear-gradient(var(--orchid),var(--orchid)) 0 100%/0 2px no-repeat;transition:background-size 250ms var(--ease-out),color 300ms}
 @media (hover:hover) and (pointer:fine){.nav a:hover{background-size:100% 2px}}
 .nav .btn{min-height:44px;padding:0 20px;font-size:17px;color:var(--cream);background:var(--deep)}
 @media (hover:hover) and (pointer:fine){.nav .btn:hover{background:#523380}}
+/* sobre a foto escura do hero, o topo fica claro */
+.site-header.over-dark:not(.solid) .brand b,.site-header.over-dark:not(.solid) .nav a:not(.btn){color:var(--cream)}
+.site-header.over-dark:not(.solid) .brand small{color:var(--lilac)}
+.site-header.over-dark:not(.solid) .nav .btn{background:var(--cream);color:var(--deep)}
 @media (max-width:959px){.nav a:not(.btn){display:none}}
-@media (max-width:599px){.nav .btn{display:none}.brand small{font-size:13px}}
-
-/* ---------- hero ---------- */
-.hero{padding-block:clamp(28px,4vw,56px) var(--pad)}
-.hero .wrap{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:center}
-.hero-lotus{width:118px;margin-bottom:22px}
-.eyebrow{font-size:15px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orchid-ink);margin-bottom:14px}
-.hero h1{font-size:clamp(42px,4.4vw,62px);line-height:1.04}
-.hero h1 em{font-style:italic;font-weight:800;color:var(--orchid)}
-.hero .lead{font-size:clamp(20px,1.6vw,23px);color:var(--muted);max-width:36ch;margin-top:22px}
-.hero .ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
-.hero-photo{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/5;max-height:min(720px,calc(100svh - 140px));width:100%;justify-self:end;background:var(--lilac-soft)}
-.hero-photo picture{position:absolute;inset:0}
-.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 50%}
-@media (max-width:899px){
-  .hero .wrap{grid-template-columns:1fr}
-  .hero-lotus{width:84px;margin-bottom:16px}
-  .hero-photo{aspect-ratio:4/5;max-height:none;justify-self:stretch}
-}
+@media (max-width:599px){.nav .btn{display:none}}
 
 /* ---------- lótus (bloom) ---------- */
 .lotus svg{display:block;width:100%;height:auto;overflow:visible}
@@ -112,176 +106,262 @@ p{margin:0}
 .js .bloom .pb-r{transform:rotate(-70deg) scale(.7)}
 .js .bloom .pb-l{transform:rotate(70deg) scale(.7)}
 .js .bloom .core{transform:scale(.8)}
-.bloom .pt,.bloom .core{transition:transform 1100ms var(--ease-out),opacity 700ms ease}
+.bloom .pt,.bloom .core{transition:transform 1300ms var(--ease-out),opacity 800ms ease}
 .js .bloom.is-open .pt,.js .bloom.is-open .core,.js .bloom .open{opacity:1;transform:none}
 .bloom.is-open .pc{transition-delay:0ms}
-.bloom.is-open .pa{transition-delay:160ms}
-.bloom.is-open .pb{transition-delay:320ms}
-.bloom.is-open .core{transition-delay:560ms}
+.bloom.is-open .pa{transition-delay:180ms}
+.bloom.is-open .pb{transition-delay:360ms}
+.bloom.is-open .core{transition-delay:620ms}
 
-/* ---------- revelação ao rolar ---------- */
-.js .rv{opacity:0;transform:translateY(26px);transition:opacity 700ms ease,transform 900ms var(--ease-out);transition-delay:calc(var(--i,0) * 70ms)}
+/* ---------- revelação ---------- */
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity 800ms ease,transform 1000ms var(--ease-out);transition-delay:calc(var(--i,0) * 80ms)}
 .js .rv.in{opacity:1;transform:none}
-.clip picture{display:block;width:100%;height:100%}
-.js .clip picture{clip-path:inset(0 0 100% 0);transition:clip-path 1300ms var(--ease-io)}
-.js .clip.in picture{clip-path:inset(0 0 0 0)}
-.js .hero .rv{transition-delay:calc(200ms + var(--i,0) * 80ms)}
-@supports (animation-timeline:view()){
-  @media (prefers-reduced-motion:no-preference){
-    .drift img{animation:drift linear both;animation-timeline:view();scale:1.08}
-    @keyframes drift{from{transform:translateY(-4%)}to{transform:translateY(4%)}}
-  }
+
+/* =========================================================
+   HERO · a lótus desabrocha e o studio se abre de dentro dela
+   ========================================================= */
+.hero{position:relative;height:230vh;background:var(--lilac-soft)}
+.hero-stick{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+/* desktop: painel alto à direita com a foto inteira do studio, dissolvendo no lilás à esquerda e embaixo */
+.hero-photo{position:absolute;top:0;bottom:0;right:0;width:var(--pw,54vw);overflow:hidden;
+  -webkit-mask:linear-gradient(90deg,transparent 0,#000 24%),linear-gradient(180deg,#000 74%,transparent 100%);-webkit-mask-composite:source-in;
+  mask:linear-gradient(90deg,transparent 0,#000 24%) intersect,linear-gradient(180deg,#000 74%,transparent 100%);clip-path:circle(var(--rad,0px) at var(--cx,60%) var(--cy,50%));will-change:clip-path}
+.stage{position:absolute;transform-origin:var(--ox,62.7%) var(--oy,48.8%);transform:scale(var(--z,1));will-change:transform}
+.stage img{width:100%;height:100%;object-fit:cover}
+.hero-shade{position:absolute;inset:0;pointer-events:none;opacity:var(--shade,0);
+  background:linear-gradient(90deg,rgba(42,25,68,.92) 0%,rgba(42,25,68,.72) 34%,rgba(42,25,68,.18) 58%,rgba(42,25,68,0) 72%),linear-gradient(180deg,rgba(42,25,68,.55) 0,rgba(42,25,68,0) 22%)}
+.hero-lotus{position:absolute;left:0;top:0;width:var(--lw,300px);transform:translate(var(--lx,0),var(--ly,0));opacity:var(--lo,1);will-change:transform,opacity;filter:drop-shadow(0 18px 40px rgba(64,38,101,.18))}
+.hero-copy{position:absolute;inset:0;display:flex;align-items:center;pointer-events:none}
+.hero-copy .in{max-width:min(560px,calc(46vw - max(var(--pad),(100vw - 1240px) / 2 + var(--pad)) - 16px));pointer-events:auto}
+.hero .eyebrow{font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--orchid-ink);margin-bottom:16px;transition:color 500ms}
+.hero h1{font-size:clamp(44px,4.4vw,74px);line-height:.98;transition:color 500ms}
+.hero h1 em{font-style:italic;font-weight:800;color:var(--orchid);transition:color 500ms}
+.hero .lead{font-size:clamp(20px,1.6vw,23px);color:var(--muted);max-width:36ch;margin-top:24px;transition:color 500ms}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.hero .btn--ghost{transition:color 500ms,box-shadow 500ms,background-color 200ms}
+.hero.dark .eyebrow{color:var(--lilac)}
+.hero.dark h1{color:var(--cream)}
+.hero.dark h1 em{color:#D7B8E3}
+.hero.dark .lead{color:#E6DEF2}
+.hero.dark .btn:not(.btn--ghost){background:var(--cream);color:var(--deep)}
+.hero.dark .btn--ghost{color:var(--cream);box-shadow:inset 0 0 0 2px rgba(241,234,215,.7)}
+@media (hover:hover) and (pointer:fine){.hero.dark .btn--ghost:hover{background:rgba(241,234,215,.12)}}
+/* fim do hero: a foto se dissolve no lilás da próxima parte */
+.hero::after{content:none;position:absolute;left:0;right:0;bottom:0;height:30vh;z-index:3;pointer-events:none;background:linear-gradient(180deg,rgba(238,236,248,0) 0%,rgba(238,236,248,.55) 45%,var(--lilac-soft) 92%)}
+.scroll-hint{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);width:2px;height:46px;border-radius:2px;background:rgba(64,38,101,.15);overflow:hidden;transition:opacity 400ms}
+.scroll-hint::after{content:"";position:absolute;inset:0;background:var(--deep);animation:drip 1.9s var(--ease-io) infinite}
+@keyframes drip{0%{transform:translateY(-100%)}60%,100%{transform:translateY(100%)}}
+@media (max-width:760px){
+  .hero{height:230vh}
+  .hero-copy{align-items:flex-end;padding-bottom:calc(34px + env(safe-area-inset-bottom))}
+  .hero-copy .in{max-width:none}
+  .hero h1{font-size:clamp(40px,11vw,52px)}
+  .hero .lead{font-size:19px;margin-top:16px}
+  .hero .ctas{margin-top:22px}
+  .hero .ctas .btn{flex:1 1 auto;justify-content:center}
+  .hero-shade{background:linear-gradient(0deg,rgba(42,25,68,.96) 0%,rgba(42,25,68,.9) 50%,rgba(42,25,68,.35) 64%,rgba(42,25,68,0) 76%),linear-gradient(180deg,rgba(42,25,68,.5) 0,rgba(42,25,68,0) 16%)}
+  .hero::after{content:""}
+  .hero-photo{width:100%;-webkit-mask:none;mask:none}
+  .scroll-hint{display:none}
 }
 
-/* ---------- história (perguntas) ---------- */
+/* =========================================================
+   CAMINHO · perguntas que valem a pena
+   ========================================================= */
 .story{background:var(--lilac-soft);position:relative}
-.step-mark{position:absolute;left:0;width:1px;pointer-events:none}
-.story-stage{padding-block:var(--pad)}
-.story-head{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:32px;margin-bottom:28px}
-.story-head h2{font-size:clamp(32px,3.3vw,46px)}
-.story-head p{font-size:20px;color:var(--muted);margin-top:10px;max-width:62ch}
-.story-progress{display:flex;align-items:center;gap:16px}
-.story-progress .lotus{width:112px;position:relative}
+.story-stage{position:relative;padding-block:24px var(--sec)}
+.story-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,4vw,64px);align-items:center}
+.story-head h2{font-size:clamp(34px,3.6vw,52px);max-width:15ch}
+.story-head p{font-size:20px;color:var(--muted);margin-top:14px;max-width:46ch}
+.story-progress{display:flex;align-items:center;gap:16px;margin-top:26px}
+.story-progress .lotus{width:96px;position:relative}
 .story-progress .lotus .ghost{position:absolute;inset:0;opacity:.22;filter:saturate(0)}
 .story-progress .count{font-size:16px;color:var(--muted);line-height:1.3;white-space:nowrap}
 .story-progress .count b{display:block;font-size:30px;color:var(--deep);line-height:1}
-.story-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,4vw,56px);align-items:stretch}
-.story-photos{position:relative;border-radius:var(--r);overflow:hidden;background:var(--lilac);min-height:420px}
-.story-photos img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.04);transition:opacity 700ms ease,transform 1400ms var(--ease-out)}
-.story-photos img.on{opacity:1;transform:none}
-.no-js-photo .story-photos img:first-child,html:not(.js) .story-photos img:first-child{opacity:1;transform:none}
-.thread{display:flex;flex-direction:column;gap:14px;justify-content:center}
-.bubble{max-width:90%;padding:13px 20px;border-radius:22px;font-size:19px;line-height:1.4}
-.bubble.q{align-self:flex-start;background:#fff;color:var(--deep);font-weight:700;font-size:21px;border-bottom-left-radius:6px;box-shadow:0 1px 0 var(--line)}
+.story-bar{flex:1;height:2px;background:var(--line);border-radius:2px;overflow:hidden;max-width:180px}
+.story-bar i{display:block;height:100%;background:var(--orchid);transform-origin:left;transform:scaleX(var(--sp,0))}
+.thread{display:flex;flex-direction:column;gap:14px;margin-top:28px}
+.bubble{max-width:92%;padding:14px 22px;border-radius:24px;font-size:19px;line-height:1.42;margin:0}
+.bubble.q{align-self:flex-start;background:#fff;color:var(--deep);font-weight:700;font-size:21px;border-bottom-left-radius:6px;box-shadow:0 1px 0 var(--line),0 14px 30px -22px rgba(64,38,101,.5)}
 .bubble.a{align-self:flex-end;background:var(--deep);color:var(--cream);border-bottom-right-radius:6px}
 .bubble.a strong{color:#fff}
-.bubble.final{align-self:stretch;max-width:none;display:flex;align-items:center;gap:16px;background:var(--cream);color:var(--deep);font-size:23px;font-weight:700;font-style:italic;border-radius:22px;padding:16px 22px}
-.bubble.final img{width:46px;flex:none}
-.bubble.final span small{display:block;font-size:15px;font-style:normal;font-weight:500;color:var(--muted)}
-.js .thread .bubble{opacity:0;transform:translateY(18px) scale(.98);transition:opacity 450ms ease,transform 600ms var(--ease-out)}
-.js .thread .bubble.a{transform:translateY(18px) scale(.98)}
+.js .thread .bubble{opacity:0;transform:translateY(18px) scale(.97);transition:opacity 450ms ease,transform 650ms var(--ease-out)}
+.js .thread .bubble.a{transform:translateX(18px) scale(.97)}
 .js .thread .bubble.show{opacity:1;transform:none}
-.story-mobile-photo{display:none}
-/* modo palco fixo: só em telas largas e altas o bastante */
+.story-photos{position:relative;height:100%;min-height:440px}
+.story-photos .frame{position:absolute;inset:0;border-radius:var(--r);overflow:hidden;background:var(--lilac)}
+.story-photos img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(calc(1.1 - var(--sp,0) * .08));transition:opacity 800ms ease}
+.story-photos img.on{opacity:1}
+.story-photos .num{position:absolute;right:22px;bottom:14px;font-size:clamp(90px,10vw,150px);font-weight:800;line-height:1;color:rgba(255,255,255,.9);letter-spacing:-.04em;mix-blend-mode:overlay}
+html:not(.js) .story-photos img:first-child{opacity:1}
+/* palco fixo: telas largas e altas */
 @media (min-width:960px) and (min-height:640px){
-  .story.pinned{height:320vh}
-  .story.pinned .story-stage{position:sticky;top:var(--header);height:calc(100vh - var(--header));display:flex;flex-direction:column;justify-content:center;padding-block:28px}
+  .story.pinned{height:330vh}
+  .story.pinned .story-stage{position:sticky;top:0;height:100vh;height:100svh;padding:calc(var(--header) + 20px) 0 28px;display:flex;align-items:center}
+  .story.pinned .story-stage>.wrap{width:100%}
+  /* foto sangrando até a borda direita, com degradê para o lilás */
+  .story.pinned .story-photos{position:absolute;top:0;bottom:0;left:0;width:50vw;min-height:0;height:auto}
+  .story.pinned .story-photos .frame{border-radius:0;-webkit-mask:linear-gradient(270deg,transparent 0,#000 26%);mask:linear-gradient(270deg,transparent 0,#000 26%)}
+  .story.pinned .story-photos .frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--lilac-soft) 0,rgba(238,236,248,0) 16%,rgba(238,236,248,0) 80%,var(--lilac-soft) 100%)}
+  .story.pinned .story-grid{grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr)}
+  .story.pinned .story-col{grid-column:2}
+  .story.pinned .story-photos{width:46vw}
+  /* tudo escala com a altura da tela para caber no palco fixo */
+  .story.pinned .story-head h2{font-size:clamp(30px,4.6vh,50px);max-width:22ch}
+  .story.pinned .story-head p{font-size:clamp(16px,2.1vh,20px);margin-top:1.2vh}
+  .story.pinned .story-progress{margin-top:2vh}
+  .story.pinned .story-progress .lotus{width:clamp(64px,9vh,96px)}
+  .story.pinned .story-progress .count b{font-size:clamp(22px,3vh,30px)}
+  .story.pinned .thread{gap:1.3vh;margin-top:2.4vh}
+  .story.pinned .bubble{font-size:clamp(15.5px,2.05vh,19px);padding:1.25vh 20px}
+  .story.pinned .bubble.q{font-size:clamp(17px,2.3vh,21px)}
 }
-/* palco compacto: notebooks com pouca altura útil (ex.: 1366×768, 1920×1080 com zoom 125%) */
-@media (min-width:960px) and (min-height:640px) and (max-height:819px){
-  .story.pinned .story-stage{padding-block:14px}
-  .story.pinned .story-head{margin-bottom:14px}
-  .story.pinned .story-head h2{font-size:clamp(28px,2.5vw,36px)}
-  .story.pinned .story-head p{font-size:17px;margin-top:6px}
-  .story.pinned .story-progress .lotus{width:84px}
-  .story.pinned .story-progress .count b{font-size:24px}
-  .story.pinned .story-grid{flex:1;min-height:0}
-  .story.pinned .story-photos{min-height:0}
-  .story.pinned .thread{gap:8px}
-  .story.pinned .bubble{font-size:16px;padding:9px 16px;border-radius:18px}
-  .story.pinned .bubble.q{font-size:17px}
-  .story.pinned .bubble.final{font-size:18px;padding:11px 18px}
-  .story.pinned .bubble.final img{width:34px}
-  .story.pinned .bubble.final span small{font-size:13px}
-}
-@media (max-width:959px){
-  .story-head{grid-template-columns:1fr}
-  .story-progress{display:none}
+@media (max-width:959px),(max-height:639px){
   .story-grid{grid-template-columns:1fr}
-  .story-photos{display:none}
-  .story-mobile-photo{display:block;border-radius:var(--r);overflow:hidden;margin-bottom:8px;aspect-ratio:4/3}
-  .story-mobile-photo img{width:100%;height:100%;object-fit:cover}
-  .bubble{max-width:94%;font-size:18px}
+  .story-photos{order:-1;min-height:0;aspect-ratio:4/3.2;margin-inline:calc(var(--pad) * -1)}
+  .story-photos .frame{border-radius:0;-webkit-mask:linear-gradient(180deg,transparent 0,#000 22%,#000 62%,transparent);mask:linear-gradient(180deg,transparent 0,#000 22%,#000 62%,transparent)}
+  .story-photos .num{display:none}
+  .story-stage{padding-top:0}
+  .bubble{max-width:95%;font-size:18px}
   .bubble.q{font-size:19px}
-  .bubble.final{font-size:20px}
 }
 
-/* ---------- sobre ---------- */
-.about{padding-block:var(--pad)}
-.about .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,5vw,72px);align-items:stretch}
-.about-photo{border-radius:var(--r);overflow:hidden;min-height:520px;position:relative;background:var(--lilac-soft)}
-.about-photo picture{position:absolute;inset:0}
-.about-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%}
-.about-text{display:flex;flex-direction:column;justify-content:center;padding-block:8px}
-.about-text h2{font-size:clamp(36px,3.8vw,54px);max-width:16ch}
+/* =========================================================
+   FRASE DA PAREDE · palavras acendem com o scroll
+   ========================================================= */
+/* a parede de verdade ao fundo: a frase está escrita nela, à direita do logo */
+.wall{position:relative;color:var(--cream);background:var(--deep);padding:clamp(170px,15vw,210px) 0;overflow:hidden;isolation:isolate}
+.wall-bg{position:absolute;inset:0;z-index:-1}
+.wall-bg img{width:100%;height:100%;object-fit:cover;object-position:60% 60%;filter:blur(7px) saturate(1.1);transform:scale(var(--wz,1.2))}
+.wall-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--lilac-soft) 0,rgba(64,38,101,.72) 22%,rgba(42,25,68,.8) 50%,rgba(64,38,101,.72) 78%,var(--paper) 100%)}
+.wall-q{position:relative;text-shadow:0 2px 30px rgba(42,25,68,.45);font-size:clamp(46px,8.4vw,124px);line-height:.98;font-weight:800;font-style:italic;letter-spacing:-.03em;text-align:center;max-width:14ch;margin-inline:auto}
+.wall-q span{color:rgba(241,234,215,.16);transition:color 380ms ease}
+.wall-q span.lit{color:var(--cream)}
+.wall-cap{position:relative;display:flex;align-items:center;justify-content:center;gap:14px;margin-top:40px;font-size:18px;color:#D9D2EA}
+.wall-cap img{width:44px}
+
+/* =========================================================
+   SOBRE
+   ========================================================= */
+.about{padding-block:40px var(--sec)}
+.about .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(36px,6vw,96px);align-items:center}
+.about-photo{position:relative}
+.about-photo .frame{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/5;background:var(--lilac-soft)}
+.about-photo .frame img{position:absolute;inset:-8% 0;width:100%;height:116%;object-fit:cover;object-position:50% 22%;transform:translateY(var(--py,0))}
+.about-photo .frame::after{content:"";position:absolute;inset:auto 0 0;height:38%;background:linear-gradient(180deg,rgba(64,38,101,0),rgba(64,38,101,.55))}
+.js .about-photo .frame{clip-path:inset(12% 12% 12% 12% round var(--r));transition:clip-path 1400ms var(--ease-io)}
+.js .about-photo.in .frame{clip-path:inset(0 0 0 0 round var(--r))}
+.seal{position:absolute;right:-34px;bottom:-34px;width:150px;height:150px;border-radius:50%;background:var(--paper);box-shadow:0 18px 40px -20px rgba(64,38,101,.45);display:grid;place-items:center}
+.seal svg.ring{position:absolute;inset:8px;width:calc(100% - 16px);height:calc(100% - 16px);animation:spin 26s linear infinite}
+.seal img{width:58px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.about-text h2{font-size:clamp(38px,4.2vw,62px);max-width:15ch}
+.about-text h2 .n{color:var(--orchid);font-variant-numeric:tabular-nums}
 .about-text .body{margin-top:26px;display:grid;gap:16px;font-size:20px;color:var(--muted);max-width:56ch}
 .about-text .body strong{color:var(--ink)}
-.quote{position:relative;margin:30px 0 0;padding:4px 0 4px 26px;font-size:clamp(22px,2vw,27px);line-height:1.35;font-style:italic;font-weight:500;color:var(--deep);max-width:34ch}
-.quote::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;border-radius:4px;background:var(--orchid);transform-origin:top}
-.js .quote::before{transform:scaleY(0);transition:transform 900ms var(--ease-out) 300ms}
-.js .quote.in::before{transform:none}
-.sign{margin-top:28px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.quote{position:relative;margin:32px 0 0;padding:4px 0 4px 26px;font-size:clamp(22px,2vw,28px);line-height:1.35;font-style:italic;font-weight:500;color:var(--deep);max-width:34ch}
+.quote::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;border-radius:4px;background:var(--orchid);transform-origin:top;transition:transform 1000ms var(--ease-out) 300ms}
+.js .quote.rv::before{transform:scaleY(0)}
+.js .quote.rv.in::before{transform:none}
+.sign{margin-top:26px;display:flex;align-items:center;gap:14px}
 .sign b{font-size:22px;color:var(--deep)}
-.sign span{font-size:17px;color:var(--muted)}
-.pendente{display:inline-block;font-size:14px;font-weight:700;letter-spacing:.02em;color:#8a3b12;background:#FFF1D6;border:1.5px dashed #c77d2e;border-radius:8px;padding:3px 10px;line-height:1.3}
+.sign::before{content:"";width:40px;height:2px;background:var(--orchid)}
 @media (max-width:899px){
   .about .wrap{grid-template-columns:1fr}
-  .about-photo{min-height:0;aspect-ratio:4/5}
+  .seal{right:12px;bottom:-30px;width:120px;height:120px}
+  .seal img{width:46px}
 }
 
-/* ---------- serviços ---------- */
-.services{padding-block:28px var(--pad)}
-.sec-head{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(28px,5vw,72px);align-items:end;margin-bottom:44px}
-.sec-head h2{font-size:clamp(36px,3.8vw,54px)}
+/* =========================================================
+   SERVIÇOS · cartões que se empilham
+   ========================================================= */
+.services{padding-block:clamp(40px,5vw,70px) var(--sec)}
+.sec-head{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(28px,5vw,72px);align-items:end;margin-bottom:clamp(40px,5vw,64px)}
+.sec-head h2{font-size:clamp(38px,4.2vw,62px)}
 .sec-head .aside{font-size:clamp(20px,1.6vw,23px);line-height:1.5;color:var(--muted);border-left:3px solid var(--orchid);padding:2px 0 4px 24px}
 .sec-head .aside strong{color:var(--deep);font-weight:700}
-.voices .sec-head .aside{color:#d9d2ea;border-color:var(--lilac)}
-.voices .sec-head .aside strong{color:#fff}
 @media (max-width:899px){.sec-head{grid-template-columns:1fr;gap:18px}}
-.bento{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:20px}
-.card{border-radius:var(--r);background:#fff;box-shadow:0 0 0 1px var(--line);overflow:hidden;display:flex;flex-direction:column}
-.card .ph{position:relative;overflow:hidden;background:var(--lilac-soft)}
-.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform 900ms var(--ease-out)}
-@media (hover:hover) and (pointer:fine){.card:hover .ph img{transform:scale(1.03)}}
-.card .tx{padding:26px 28px 30px;display:flex;flex-direction:column;gap:10px;flex:1}
-.card h3{font-size:30px}
+.stack{display:grid;gap:28px}
+.card{position:relative;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);border-radius:28px;background:#fff;box-shadow:0 0 0 1px var(--line),0 30px 60px -40px rgba(64,38,101,.45);overflow:hidden;transform-origin:50% 0;transform:scale(var(--sc,1))}
+.card::after{content:"";position:absolute;inset:0;background:var(--night);opacity:var(--dim,0);pointer-events:none;border-radius:inherit}
+.card .ph{position:relative;min-height:440px;overflow:hidden;background:var(--lilac-soft)}
+.card .ph picture{position:absolute;inset:0}
+.card .ph img{width:100%;height:100%;object-fit:cover;transform:scale(1.06);transition:transform 1400ms var(--ease-out)}
+.card.in .ph img{transform:none}
+/* degradê: a foto se dissolve no branco do cartão */
+.card .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,0) 55%,#fff 100%)}
+.card.flip{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr)}
+.card.flip .ph{order:2}
+.card.flip .ph::after{background:linear-gradient(270deg,rgba(255,255,255,0) 55%,#fff 100%)}
+.card .tx{position:relative;padding:clamp(30px,3.6vw,52px);display:flex;flex-direction:column;justify-content:center;gap:12px}
+.card .idx{display:flex;align-items:center;gap:12px;font-size:15px;font-weight:700;letter-spacing:.14em;color:var(--orchid-ink)}
+.card .idx i{font-style:normal;color:var(--muted);font-weight:500}
+.card h3{font-size:clamp(34px,3.2vw,46px);display:flex;align-items:center;gap:14px}
 .card p{font-size:19px;color:var(--muted)}
-.card .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:8px}
-.card .tags span{font-size:15px;font-weight:700;color:var(--deep);background:var(--lilac-soft);border-radius:999px;padding:5px 12px}
-.ico{width:46px;height:46px;flex:none;color:var(--deep)}
+.card .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.card .tags span{font-size:15px;font-weight:700;color:var(--deep);background:var(--lilac-soft);border-radius:999px;padding:6px 13px}
+.js .card .tags span{opacity:0;transform:translateY(8px);transition:opacity 500ms ease,transform 600ms var(--ease-out);transition-delay:calc(400ms + var(--t,0) * 70ms)}
+.js .card.in .tags span{opacity:1;transform:none}
+.ico{width:44px;height:44px;flex:none;color:var(--orchid)}
 .ico path{stroke-dasharray:1;stroke-dashoffset:0}
-.js .ico path{stroke-dashoffset:1;transition:stroke-dashoffset 1200ms var(--ease-out) 250ms}
-.js .in .ico path,.js .ico.in path{stroke-dashoffset:0}
-.c-fisio{grid-column:1 / 8}
-.c-pilates{grid-column:8 / 13}
-.c-fisio .ph,.c-pilates .ph{height:300px}
-.c-yoga{grid-column:1 / 8;flex-direction:row}
-.c-yoga .ph{flex:0 0 46%}
-.c-mass{grid-column:8 / 13}
-.c-mass .ph{height:240px}
-.c-acu{grid-column:1 / 7}
-.c-laser{grid-column:7 / 13}
-.c-acu .ph,.c-laser .ph{height:280px}
+.js .ico path{stroke-dashoffset:1;transition:stroke-dashoffset 1400ms var(--ease-out) 350ms}
+.js .in .ico path{stroke-dashoffset:0}
+@media (min-width:960px) and (min-height:700px){
+  .stack.stacking .card{position:sticky;top:calc(var(--header) + 22px + var(--k) * 14px);min-height:min(560px,calc(100vh - var(--header) - 120px))}
+  .stack.stacking{padding-bottom:40px}
+}
 @media (max-width:959px){
-  .bento{grid-template-columns:1fr}
-  .c-fisio,.c-pilates,.c-yoga,.c-acu,.c-laser,.c-mass{grid-column:1 / -1;grid-row:auto}
-  .c-yoga{flex-direction:column}
-  .c-yoga .ph{flex:none;height:300px}
-  .c-fisio .ph,.c-pilates .ph,.c-mass .ph,.c-acu .ph,.c-laser .ph{height:240px}
+  .card,.card.flip{grid-template-columns:1fr}
+  .card.flip .ph{order:0}
+  .card .ph{min-height:0;aspect-ratio:4/3}
+  .card .ph::after,.card.flip .ph::after{background:linear-gradient(180deg,rgba(255,255,255,0) 55%,#fff 100%)}
+  .card .tx{padding:4px 24px 30px}
 }
 
-/* ---------- depoimentos ---------- */
-.voices{background:var(--deep);color:var(--cream);padding-block:var(--pad)}
-.voices h2{color:var(--cream);font-size:clamp(34px,3.6vw,50px)}
-.voices .pendente{margin-top:18px}
-.v-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:20px;align-items:stretch}
-.v-side{display:grid;gap:20px}
-.voice{margin:0;border-radius:var(--r);background:rgba(241,234,215,.07);box-shadow:inset 0 0 0 1px rgba(241,234,215,.16);padding:30px 32px;display:flex;flex-direction:column;justify-content:space-between;gap:22px}
+/* =========================================================
+   DEPOIMENTOS · a foto da aula se dissolve no roxo
+   ========================================================= */
+.voices{position:relative;background:var(--deep);color:var(--cream);padding-bottom:clamp(150px,14vw,200px)}
+.voices::after{content:"";position:absolute;left:0;right:0;bottom:0;height:150px;background:linear-gradient(180deg,rgba(252,251,254,0),var(--paper));pointer-events:none}
+.v-band{position:relative;height:clamp(420px,62vh,640px);overflow:hidden}
+.v-band picture{position:absolute;inset:-12% 0}
+.v-band img{width:100%;height:100%;object-fit:cover;object-position:50% 40%;transform:translateY(var(--py,0))}
+.v-band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--paper) 0%,rgba(252,251,254,0) 22%,rgba(64,38,101,.15) 48%,rgba(64,38,101,.85) 80%,var(--deep) 100%)}
+.voices .head{position:relative;z-index:2;margin-top:-180px}
+.voices .sec-head h2{color:var(--cream);font-size:clamp(38px,4.2vw,62px)}
+.voices .sec-head .aside{color:#d9d2ea;border-color:var(--lilac)}
+.voices .sec-head .aside strong{color:#fff}
+.v-grid{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:22px;align-items:start}
+.v-side{display:grid;gap:22px;padding-top:70px}
+.voice{margin:0;border-radius:var(--r);background:rgba(241,234,215,.07);box-shadow:inset 0 0 0 1px rgba(241,234,215,.16);padding:32px 34px;display:flex;flex-direction:column;justify-content:space-between;gap:24px;transform:translateY(var(--vy,0))}
 .voice blockquote{margin:0;font-size:21px;line-height:1.45;font-style:italic}
-.voice.big blockquote{font-size:clamp(25px,2.4vw,32px);line-height:1.32}
-.voice.big{background:var(--orchid);box-shadow:none}
+.voice.big blockquote{font-size:clamp(25px,2.4vw,33px);line-height:1.3}
+.voice.big{background:var(--orchid);box-shadow:0 40px 80px -40px rgba(0,0,0,.5);min-height:440px}
 .voice figcaption{font-size:17px;color:#d9d2ea}
 .voice figcaption b{display:block;font-size:19px;color:#fff}
 .voice.big figcaption{color:#f3ecff}
-.qmark{width:44px;height:44px;color:var(--lilac);margin-bottom:14px}
+.qmark{width:46px;height:46px;color:var(--lilac);margin-bottom:16px;transform-origin:left bottom;transition:transform 900ms var(--ease-out) 200ms}
+.js .voice.rv .qmark{transform:scale(.4) rotate(-12deg)}
+.js .voice.rv.in .qmark{transform:none}
 .voice.big .qmark{color:var(--cream)}
-@media (max-width:899px){.v-grid{grid-template-columns:1fr}}
+@media (max-width:899px){
+  .v-grid{grid-template-columns:1fr}
+  .v-side{padding-top:0}
+  .voice.big{min-height:0}
+  .voices .head{margin-top:-140px}
+}
 
-/* ---------- contato ---------- */
-.contact{padding-block:var(--pad)}
-.contact .sec-head{margin-bottom:36px}
-.c-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:20px;align-items:stretch}
-.info{border-radius:var(--r);background:var(--lilac-soft);padding:32px;display:flex;flex-direction:column;gap:22px}
+/* =========================================================
+   CONTATO
+   ========================================================= */
+.contact{padding-block:0 24px;margin-top:-40px;position:relative}
+.c-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:22px;align-items:stretch}
+.info{border-radius:var(--r);background:var(--lilac-soft);padding:34px;display:flex;flex-direction:column;gap:24px}
+.status{display:inline-flex;align-self:flex-start;align-items:center;gap:10px;padding:8px 14px;border-radius:999px;background:#fff;font-size:16px;font-weight:700;color:var(--deep);box-shadow:0 0 0 1px var(--line)}
+.status i{width:10px;height:10px;border-radius:50%;background:#a59db4;position:relative;flex:none}
+.status.open i{background:#2fae62}
+.status.open i::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid #2fae62;animation:ping 1.8s ease-out infinite}
+@keyframes ping{from{transform:scale(.4);opacity:1}to{transform:scale(1.4);opacity:0}}
 .info dl{margin:0;display:grid;gap:20px}
 .info .row{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start}
 .info .row svg{width:26px;height:26px;color:var(--orchid-ink);margin-top:4px}
@@ -289,12 +369,24 @@ p{margin:0}
 .info dd{margin:2px 0 0;font-size:20px;color:var(--ink)}
 .info dd a{text-decoration:none;border-bottom:1.5px solid var(--lilac)}
 .info .btn{margin-top:auto;align-self:flex-start}
-.map{border-radius:var(--r);overflow:hidden;min-height:440px;background:var(--lilac-soft);position:relative}
-.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:saturate(.85)}
-@media (max-width:899px){.c-grid{grid-template-columns:1fr}.map{min-height:320px}}
+.map{border-radius:var(--r);overflow:hidden;min-height:480px;background:var(--lilac-soft);position:relative}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:saturate(.75) hue-rotate(-8deg)}
+/* o recorte fica no iframe: um alvo 100% recortado nunca é detectado pelo IntersectionObserver */
+.js .map.rv{transform:none;transition:opacity 600ms}
+.js .map.rv iframe{clip-path:inset(0 0 0 100%);transition:clip-path 1300ms var(--ease-io)}
+.js .map.rv.in iframe{clip-path:inset(0 0 0 0)}
+@media (max-width:899px){.c-grid{grid-template-columns:1fr}.map{min-height:340px}}
 
-/* ---------- rodapé ---------- */
-.site-footer{background:#2a1944;color:#d9d2ea;padding-block:56px 30px;font-size:17px}
+/* =========================================================
+   RODAPÉ · foto que se dissolve no roxo da noite
+   ========================================================= */
+.site-footer{position:relative;background:var(--night);color:#d9d2ea;font-size:17px}
+.f-band{position:relative;height:clamp(260px,40vh,420px);overflow:hidden}
+.f-band picture{position:absolute;inset:-14% 0}
+.f-band img{width:100%;height:100%;object-fit:cover;object-position:50% 45%;transform:translateY(var(--py,0))}
+.f-band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--paper) 0%,rgba(252,251,254,0) 30%,rgba(42,25,68,.3) 55%,var(--night) 100%)}
+.f-band .lotus{position:absolute;left:50%;bottom:-6px;width:150px;transform:translateX(-50%);z-index:2}
+.site-footer .wrap{position:relative;padding-block:46px 30px}
 .f-grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start}
 .f-brand{display:flex;gap:14px;align-items:center}
 .f-brand img{width:56px}
@@ -315,26 +407,26 @@ p{margin:0}
 .m-cta{display:none}
 @media (max-width:599px){
   body{padding-bottom:84px}
-  .m-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(252,251,254,.97);box-shadow:0 -1px 0 var(--line)}
+  .m-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(252,251,254,.96);box-shadow:0 -1px 0 var(--line);transform:translateY(110%);transition:transform 450ms var(--ease-out)}
+  .m-cta.show{transform:none}
   .m-cta .btn{width:100%;justify-content:center}
 }
 
 @media (prefers-reduced-motion:reduce){
-  .js .rv,.js .thread .bubble{transform:none;transition:opacity 300ms ease}
-  .js .clip picture{clip-path:none}
+  *,*::before,*::after{animation:none!important}
+  .js .rv,.js .thread .bubble,.js .card .tags span{transform:none!important;transition:opacity 300ms ease}
   .js .bloom .pt,.js .bloom .core{transform:none;transition:opacity 400ms ease}
-  .story-photos img{transform:none}
-  .js .quote::before{transform:none}
+  .js .about-photo .frame,.js .map.rv{clip-path:none}
   .js .ico path{stroke-dashoffset:0}
+  .hero{height:100vh}
 }
 </style>
 </head>
 <body>
-<span class="top-sentinel" aria-hidden="true"></span>
 <header class="site-header" id="topo">
   <div class="wrap">
     <a class="brand" href="#inicio" aria-label="Studio Raquel Simon, início">
-      <img src="assets/lotus.svg" alt="" width="52" height="38">
+      <img src="assets/lotus.svg" alt="" width="50" height="36">
       <span><b>Raquel Simon</b><small>Studio de Pilates e Fisioterapia</small></span>
     </a>
     <nav class="nav" aria-label="Principal">
@@ -348,80 +440,104 @@ p{margin:0}
 </header>
 
 <main>
+<!-- HERO: a flor desabrocha; de dentro do miolo, o studio aparece e ela pousa no logo da parede -->
 <section class="hero" id="inicio">
-  <div class="wrap">
-    <div>
-      <div class="lotus hero-lotus bloom" id="heroLotus" aria-hidden="true"><svg viewBox="0 0 464 336"><g class="pt pb pb-r"><ellipse cx="344.8" cy="220.0" rx="53.0" ry="102.2" transform="rotate(-91.2 344.8 220.0)" fill="#402665"/><ellipse cx="331.5" cy="222.5" rx="41.0" ry="72.5" transform="rotate(-95.8 331.5 222.5)" fill="#945FA3"/></g><g class="pt pb pb-l"><ellipse cx="119.2" cy="220.0" rx="53.0" ry="102.2" transform="rotate(91.2 119.2 220.0)" fill="#402665"/><ellipse cx="132.5" cy="222.5" rx="41.0" ry="72.5" transform="rotate(95.8 132.5 222.5)" fill="#945FA3"/></g><g class="pt pa pa-r"><ellipse cx="322.0" cy="134.0" rx="51.5" ry="90.5" transform="rotate(44.0 322.0 134.0)" fill="#402665"/><ellipse cx="307.2" cy="151.2" rx="41.8" ry="70.2" transform="rotate(40.0 307.2 151.2)" fill="#945FA3"/></g><g class="pt pa pa-l"><ellipse cx="142.0" cy="134.0" rx="51.5" ry="90.5" transform="rotate(-44.0 142.0 134.0)" fill="#402665"/><ellipse cx="156.8" cy="151.2" rx="41.8" ry="70.2" transform="rotate(-40.0 156.8 151.2)" fill="#945FA3"/></g><g class="pt pc"><ellipse cx="232.0" cy="118.0" rx="53.8" ry="115.0" transform="rotate(0.0 232.0 118.0)" fill="#402665"/><ellipse cx="232.0" cy="152.5" rx="47.2" ry="105.5" transform="rotate(0.0 232.0 152.5)" fill="#945FA3"/></g><g class="core"><circle cx="232" cy="273.3" r="53.7" fill="#402665"/><circle cx="232" cy="268.8" r="49.0" fill="#F1EAD7"/></g></svg></div>
-      <p class="eyebrow rv" style="--i:0">Pilates, Yoga e Fisioterapia em Cosmópolis</p>
-      <h1 class="rv" style="--i:1">Recupere sua qualidade de vida e <em>bem-estar.</em></h1>
-      <p class="lead rv" style="--i:2">Abordagens integradas de fisioterapia, pilates e terapias manuais para uma saúde plena.</p>
-      <div class="ctas rv" style="--i:3">
-        <a class="btn" href="https://wa.me/5519971013600" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></svg>Agendar avaliação</a>
-        <a class="btn btn--ghost" href="#servicos">Ver serviços</a>
+  <div class="hero-stick">
+    <div class="hero-photo" id="heroPhoto">
+      <div class="stage" id="stage">
+        <picture>
+          <source srcset="assets/img/studio-wide.webp" type="image/webp">
+          <img src="assets/img/studio-wide.jpg" width="1170" height="780" alt="Salão do Studio Raquel Simon com aparelhos de Pilates, alunas alongando e o logotipo da flor de lótus na parede" fetchpriority="high">
+        </picture>
       </div>
     </div>
-    <figure class="hero-photo clip" style="margin:0">
-      <picture>
-        <source srcset="assets/img/hero-studio.webp" type="image/webp">
-        <img src="assets/img/hero-studio.jpg" width="1100" height="1375" alt="Alunas alongando nos aparelhos de Pilates do Studio Raquel Simon, com o logotipo da flor de lótus na parede" fetchpriority="high">
-      </picture>
-    </figure>
+    <div class="hero-shade" id="heroShade"></div>
+    <div class="lotus hero-lotus bloom" id="heroLotus" aria-hidden="true"><svg viewBox="0 0 464 336"><g class="pt pb pb-r"><ellipse cx="344.8" cy="220.0" rx="53.0" ry="102.2" transform="rotate(-91.2 344.8 220.0)" fill="#402665"/><ellipse cx="331.5" cy="222.5" rx="41.0" ry="72.5" transform="rotate(-95.8 331.5 222.5)" fill="#945FA3"/></g><g class="pt pb pb-l"><ellipse cx="119.2" cy="220.0" rx="53.0" ry="102.2" transform="rotate(91.2 119.2 220.0)" fill="#402665"/><ellipse cx="132.5" cy="222.5" rx="41.0" ry="72.5" transform="rotate(95.8 132.5 222.5)" fill="#945FA3"/></g><g class="pt pa pa-r"><ellipse cx="322.0" cy="134.0" rx="51.5" ry="90.5" transform="rotate(44.0 322.0 134.0)" fill="#402665"/><ellipse cx="307.2" cy="151.2" rx="41.8" ry="70.2" transform="rotate(40.0 307.2 151.2)" fill="#945FA3"/></g><g class="pt pa pa-l"><ellipse cx="142.0" cy="134.0" rx="51.5" ry="90.5" transform="rotate(-44.0 142.0 134.0)" fill="#402665"/><ellipse cx="156.8" cy="151.2" rx="41.8" ry="70.2" transform="rotate(-40.0 156.8 151.2)" fill="#945FA3"/></g><g class="pt pc"><ellipse cx="232.0" cy="118.0" rx="53.8" ry="115.0" transform="rotate(0.0 232.0 118.0)" fill="#402665"/><ellipse cx="232.0" cy="152.5" rx="47.2" ry="105.5" transform="rotate(0.0 232.0 152.5)" fill="#945FA3"/></g><g class="core"><circle cx="232" cy="273.3" r="53.7" fill="#402665"/><circle cx="232" cy="268.8" r="49.0" fill="#F1EAD7"/></g></svg></div>
+    <div class="hero-copy">
+      <div class="wrap">
+        <div class="in">
+          <p class="eyebrow rv" style="--i:0">Pilates, Yoga e Fisioterapia em Cosmópolis</p>
+          <h1 class="rv" style="--i:1">Recupere sua qualidade de vida e <em>bem-estar.</em></h1>
+          <p class="lead rv" style="--i:2">Abordagens integradas de fisioterapia, pilates e terapias manuais para uma saúde plena.</p>
+          <div class="ctas rv" style="--i:3">
+            <a class="btn" href="https://wa.me/5519971013600" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></svg>Agendar avaliação</a>
+            <a class="btn btn--ghost" href="#servicos">Ver serviços</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <span class="scroll-hint" id="hint" aria-hidden="true"></span>
   </div>
 </section>
 
+<!-- CAMINHO -->
 <section class="story" id="caminho" aria-labelledby="story-title">
-  <span class="step-mark" data-step="0" style="top:0;height:24%"></span>
-  <span class="step-mark" data-step="1" style="top:24%;height:22%"></span>
-  <span class="step-mark" data-step="2" style="top:46%;height:20%"></span>
-  <span class="step-mark" data-step="3" style="top:66%;height:34%"></span>
   <div class="story-stage">
     <div class="wrap">
-      <div class="story-head">
-        <div>
-          <h2 id="story-title" class="rv">Perguntas que valem a pena você se fazer.</h2>
-          <p class="rv" style="--i:1">É assim que o cuidado começa no studio: entendendo o que está por trás da dor, antes de qualquer exercício.</p>
-        </div>
-        <div class="story-progress" aria-hidden="true">
-          <div class="lotus">
-            <svg class="ghost" viewBox="0 0 464 336"><g class="pt pb pb-r"><ellipse cx="344.8" cy="220.0" rx="53.0" ry="102.2" transform="rotate(-91.2 344.8 220.0)" fill="#402665"/><ellipse cx="331.5" cy="222.5" rx="41.0" ry="72.5" transform="rotate(-95.8 331.5 222.5)" fill="#945FA3"/></g><g class="pt pb pb-l"><ellipse cx="119.2" cy="220.0" rx="53.0" ry="102.2" transform="rotate(91.2 119.2 220.0)" fill="#402665"/><ellipse cx="132.5" cy="222.5" rx="41.0" ry="72.5" transform="rotate(95.8 132.5 222.5)" fill="#945FA3"/></g><g class="pt pa pa-r"><ellipse cx="322.0" cy="134.0" rx="51.5" ry="90.5" transform="rotate(44.0 322.0 134.0)" fill="#402665"/><ellipse cx="307.2" cy="151.2" rx="41.8" ry="70.2" transform="rotate(40.0 307.2 151.2)" fill="#945FA3"/></g><g class="pt pa pa-l"><ellipse cx="142.0" cy="134.0" rx="51.5" ry="90.5" transform="rotate(-44.0 142.0 134.0)" fill="#402665"/><ellipse cx="156.8" cy="151.2" rx="41.8" ry="70.2" transform="rotate(-40.0 156.8 151.2)" fill="#945FA3"/></g><g class="pt pc"><ellipse cx="232.0" cy="118.0" rx="53.8" ry="115.0" transform="rotate(0.0 232.0 118.0)" fill="#402665"/><ellipse cx="232.0" cy="152.5" rx="47.2" ry="105.5" transform="rotate(0.0 232.0 152.5)" fill="#945FA3"/></g><g class="core"><circle cx="232" cy="273.3" r="53.7" fill="#402665"/><circle cx="232" cy="268.8" r="49.0" fill="#F1EAD7"/></g></svg>
-            <div class="bloom" id="storyLotus"><svg viewBox="0 0 464 336"><g class="pt pb pb-r"><ellipse cx="344.8" cy="220.0" rx="53.0" ry="102.2" transform="rotate(-91.2 344.8 220.0)" fill="#402665"/><ellipse cx="331.5" cy="222.5" rx="41.0" ry="72.5" transform="rotate(-95.8 331.5 222.5)" fill="#945FA3"/></g><g class="pt pb pb-l"><ellipse cx="119.2" cy="220.0" rx="53.0" ry="102.2" transform="rotate(91.2 119.2 220.0)" fill="#402665"/><ellipse cx="132.5" cy="222.5" rx="41.0" ry="72.5" transform="rotate(95.8 132.5 222.5)" fill="#945FA3"/></g><g class="pt pa pa-r"><ellipse cx="322.0" cy="134.0" rx="51.5" ry="90.5" transform="rotate(44.0 322.0 134.0)" fill="#402665"/><ellipse cx="307.2" cy="151.2" rx="41.8" ry="70.2" transform="rotate(40.0 307.2 151.2)" fill="#945FA3"/></g><g class="pt pa pa-l"><ellipse cx="142.0" cy="134.0" rx="51.5" ry="90.5" transform="rotate(-44.0 142.0 134.0)" fill="#402665"/><ellipse cx="156.8" cy="151.2" rx="41.8" ry="70.2" transform="rotate(-40.0 156.8 151.2)" fill="#945FA3"/></g><g class="pt pc"><ellipse cx="232.0" cy="118.0" rx="53.8" ry="115.0" transform="rotate(0.0 232.0 118.0)" fill="#402665"/><ellipse cx="232.0" cy="152.5" rx="47.2" ry="105.5" transform="rotate(0.0 232.0 152.5)" fill="#945FA3"/></g><g class="core"><circle cx="232" cy="273.3" r="53.7" fill="#402665"/><circle cx="232" cy="268.8" r="49.0" fill="#F1EAD7"/></g></svg></div>
-          </div>
-          <p class="count"><b id="stepNum">1 de 3</b>sinais do corpo</p>
-        </div>
-      </div>
       <div class="story-grid">
         <div class="story-photos" aria-hidden="true">
-          <picture><source srcset="assets/img/fisio-bola.webp" type="image/webp"><img class="on" src="assets/img/fisio-bola.jpg" width="1074" height="1130" alt="" loading="lazy"></picture>
-          <picture><source srcset="assets/img/alongamento.webp" type="image/webp"><img src="assets/img/alongamento.jpg" width="1074" height="1130" alt="" loading="lazy"></picture>
-          <picture><source srcset="assets/img/aula-solo.webp" type="image/webp"><img src="assets/img/aula-solo.jpg" width="1074" height="1130" alt="" loading="lazy"></picture>
+          <div class="frame">
+            <picture><source srcset="assets/img/fisio-bola.webp" type="image/webp"><img class="on" src="assets/img/fisio-bola.jpg" width="1074" height="1130" alt="" loading="lazy"></picture>
+            <picture><source srcset="assets/img/alongamento.webp" type="image/webp"><img src="assets/img/alongamento.jpg" width="1074" height="1130" alt="" loading="lazy"></picture>
+            <picture><source srcset="assets/img/aula-solo.webp" type="image/webp"><img src="assets/img/aula-solo.jpg" width="1074" height="1130" alt="" loading="lazy"></picture>
+          </div>
         </div>
-        <div class="thread">
-          <figure class="story-mobile-photo" style="margin:0"><picture><source srcset="assets/img/fisio-bola.webp" type="image/webp"><img src="assets/img/fisio-bola.jpg" width="1074" height="1130" alt="Paciente em atendimento de fisioterapia com bola suíça na maca do studio" loading="lazy"></picture></figure>
-          <p class="bubble q" data-s="0">Você mudou seus hábitos por causa de uma dor?</p>
-          <p class="bubble a" data-s="0">Quando a dor passa a modificar sua rotina, o corpo está encontrando formas de compensar. <strong>Seu corpo não precisa se acostumar com a dor.</strong></p>
-          <p class="bubble q" data-s="1">Um movimento simples começou a exigir esforço?</p>
-          <p class="bubble a" data-s="1">Mais do que realizar o movimento, é preciso entender como o corpo está fazendo isso. <strong>Por isso, tudo começa com uma avaliação.</strong></p>
-          <p class="bubble q" data-s="2">Acha que precisa estar flexível para começar?</p>
-          <p class="bubble a" data-s="2">Não precisa esperar seu corpo estar perfeito para voltar a se movimentar. <strong>Comece de onde você está.</strong></p>
-          <p class="bubble final" data-s="3"><img src="assets/lotus.svg" alt="" width="46" height="33"><span>O corpo alcança o que a mente acredita.<small>A frase que está na parede do studio.</small></span></p>
+        <div class="story-col">
+          <div class="story-head">
+            <h2 id="story-title" class="rv">Perguntas que valem a pena você se fazer.</h2>
+            <p class="rv" style="--i:1">É assim que o cuidado começa no studio: entendendo o que está por trás da dor, antes de qualquer exercício.</p>
+            <div class="story-progress rv" style="--i:2" aria-hidden="true">
+              <div class="lotus">
+                <svg class="ghost" viewBox="0 0 464 336"><g class="pt pb pb-r"><ellipse cx="344.8" cy="220.0" rx="53.0" ry="102.2" transform="rotate(-91.2 344.8 220.0)" fill="#402665"/><ellipse cx="331.5" cy="222.5" rx="41.0" ry="72.5" transform="rotate(-95.8 331.5 222.5)" fill="#945FA3"/></g><g class="pt pb pb-l"><ellipse cx="119.2" cy="220.0" rx="53.0" ry="102.2" transform="rotate(91.2 119.2 220.0)" fill="#402665"/><ellipse cx="132.5" cy="222.5" rx="41.0" ry="72.5" transform="rotate(95.8 132.5 222.5)" fill="#945FA3"/></g><g class="pt pa pa-r"><ellipse cx="322.0" cy="134.0" rx="51.5" ry="90.5" transform="rotate(44.0 322.0 134.0)" fill="#402665"/><ellipse cx="307.2" cy="151.2" rx="41.8" ry="70.2" transform="rotate(40.0 307.2 151.2)" fill="#945FA3"/></g><g class="pt pa pa-l"><ellipse cx="142.0" cy="134.0" rx="51.5" ry="90.5" transform="rotate(-44.0 142.0 134.0)" fill="#402665"/><ellipse cx="156.8" cy="151.2" rx="41.8" ry="70.2" transform="rotate(-40.0 156.8 151.2)" fill="#945FA3"/></g><g class="pt pc"><ellipse cx="232.0" cy="118.0" rx="53.8" ry="115.0" transform="rotate(0.0 232.0 118.0)" fill="#402665"/><ellipse cx="232.0" cy="152.5" rx="47.2" ry="105.5" transform="rotate(0.0 232.0 152.5)" fill="#945FA3"/></g><g class="core"><circle cx="232" cy="273.3" r="53.7" fill="#402665"/><circle cx="232" cy="268.8" r="49.0" fill="#F1EAD7"/></g></svg>
+                <div class="bloom" id="storyLotus"><svg viewBox="0 0 464 336"><g class="pt pb pb-r"><ellipse cx="344.8" cy="220.0" rx="53.0" ry="102.2" transform="rotate(-91.2 344.8 220.0)" fill="#402665"/><ellipse cx="331.5" cy="222.5" rx="41.0" ry="72.5" transform="rotate(-95.8 331.5 222.5)" fill="#945FA3"/></g><g class="pt pb pb-l"><ellipse cx="119.2" cy="220.0" rx="53.0" ry="102.2" transform="rotate(91.2 119.2 220.0)" fill="#402665"/><ellipse cx="132.5" cy="222.5" rx="41.0" ry="72.5" transform="rotate(95.8 132.5 222.5)" fill="#945FA3"/></g><g class="pt pa pa-r"><ellipse cx="322.0" cy="134.0" rx="51.5" ry="90.5" transform="rotate(44.0 322.0 134.0)" fill="#402665"/><ellipse cx="307.2" cy="151.2" rx="41.8" ry="70.2" transform="rotate(40.0 307.2 151.2)" fill="#945FA3"/></g><g class="pt pa pa-l"><ellipse cx="142.0" cy="134.0" rx="51.5" ry="90.5" transform="rotate(-44.0 142.0 134.0)" fill="#402665"/><ellipse cx="156.8" cy="151.2" rx="41.8" ry="70.2" transform="rotate(-40.0 156.8 151.2)" fill="#945FA3"/></g><g class="pt pc"><ellipse cx="232.0" cy="118.0" rx="53.8" ry="115.0" transform="rotate(0.0 232.0 118.0)" fill="#402665"/><ellipse cx="232.0" cy="152.5" rx="47.2" ry="105.5" transform="rotate(0.0 232.0 152.5)" fill="#945FA3"/></g><g class="core"><circle cx="232" cy="273.3" r="53.7" fill="#402665"/><circle cx="232" cy="268.8" r="49.0" fill="#F1EAD7"/></g></svg></div>
+              </div>
+              <p class="count"><b id="stepNum">1 de 3</b>sinais do corpo</p>
+              <span class="story-bar"><i></i></span>
+            </div>
+          </div>
+          <div class="thread">
+            <p class="bubble q" data-s="0">Você mudou seus hábitos por causa de uma dor?</p>
+            <p class="bubble a" data-s="0">Quando a dor passa a modificar sua rotina, o corpo está encontrando formas de compensar. <strong>Seu corpo não precisa se acostumar com a dor.</strong></p>
+            <p class="bubble q" data-s="1">Um movimento simples começou a exigir esforço?</p>
+            <p class="bubble a" data-s="1">Mais do que realizar o movimento, é preciso entender como o corpo está fazendo isso. <strong>Por isso, tudo começa com uma avaliação.</strong></p>
+            <p class="bubble q" data-s="2">Acha que precisa estar flexível para começar?</p>
+            <p class="bubble a" data-s="2">Não precisa esperar seu corpo estar perfeito para voltar a se movimentar. <strong>Comece de onde você está.</strong></p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- A FRASE DA PAREDE -->
+<section class="wall" aria-label="O corpo alcança o que a mente acredita">
+  <div class="wall-bg" aria-hidden="true"><picture><source srcset="assets/img/studio-wide.webp" type="image/webp"><img src="assets/img/studio-wide.jpg" width="1170" height="780" alt="" loading="lazy" id="wallImg"></picture></div>
+  <div class="wrap">
+    <p class="wall-q" id="wallQ">O corpo alcança o que a mente acredita.</p>
+    <p class="wall-cap rv"><img src="assets/lotus.svg" alt="" width="44" height="32">A frase que está na parede do studio.</p>
+  </div>
+</section>
+
+<!-- SOBRE -->
 <section class="about" id="sobre" aria-labelledby="about-title">
   <div class="wrap">
-    <figure class="about-photo clip" style="margin:0">
-      <picture>
-        <source srcset="assets/img/raquel.webp" type="image/webp">
-        <img src="assets/img/raquel.jpg" width="900" height="1125" alt="Raquel Simon, fisioterapeuta, de jaleco branco no studio" loading="lazy">
-      </picture>
+    <figure class="about-photo rv-clip" id="aboutPhoto">
+      <div class="frame">
+        <picture>
+          <source srcset="assets/img/raquel.webp" type="image/webp">
+          <img src="assets/img/raquel.jpg" width="900" height="1125" alt="Raquel Simon, fisioterapeuta, de jaleco branco no studio" loading="lazy" id="aboutImg">
+        </picture>
+      </div>
+      <div class="seal" aria-hidden="true">
+        <svg class="ring" viewBox="0 0 200 200"><defs><path id="ringPath" d="M100 100m-80 0a80 80 0 1 1 160 0a80 80 0 1 1 -160 0"/></defs><text font-family="Alegreya Sans" font-size="15.5" font-weight="700" letter-spacing="3.2" fill="#402665"><textPath href="#ringPath">RAQUEL SIMON · STUDIO DE PILATES E FISIOTERAPIA ·</textPath></text></svg>
+        <img src="assets/lotus.svg" alt="" width="58" height="42">
+      </div>
     </figure>
     <div class="about-text">
-      <h2 id="about-title" class="rv">Mais de 10 anos dedicados à sua saúde e bem-estar.</h2>
+      <p class="tag rv">Sobre</p>
+      <h2 id="about-title" class="rv">Mais de <span class="n" id="years" data-n="10">10</span> anos dedicados à sua saúde e bem-estar.</h2>
       <div class="body">
-        <p class="rv" style="--i:1">Sou <strong>Raquel Simon </strong>, Fisioterapeuta com atuação especializada em Traumato-ortopédica  e desportiva, Dor Crónica, Acupuntura.
+        <p class="rv" style="--i:1">Sou <strong>Raquel Simon </strong>, Fisioterapeuta com atuação especializada em Traumato-ortopédica  e desportiva, Dor Crónica, Acupuntura.</p>
         <p class="rv" style="--i:2">Ao longo  da minha trajetória me atualizei em diversas técnicas para acrescentar e beneficiar o seu tratamento,como terapias manuais,drenagem linfática, liberação miofascial,treinamento funcional na reabilitação,pilates Postural,para idosos,kids,gestante,atletas,Yoga,
 Yogaterapia e meditação.</p>
       </div>
@@ -431,87 +547,101 @@ Yogaterapia e meditação.</p>
   </div>
 </section>
 
+<!-- SERVIÇOS -->
 <section class="services" id="servicos" aria-labelledby="serv-title">
   <div class="wrap">
     <div class="sec-head">
-      <h2 id="serv-title" class="rv">Uma abordagem completa para sua saúde.</h2>
+      <div>
+        <p class="tag rv">Serviços</p>
+        <h2 id="serv-title" class="rv">Uma abordagem completa para sua saúde.</h2>
+      </div>
       <p class="aside rv" style="--i:1">Oferecemos uma abordagem <strong>integrada</strong>, combinando técnicas consagradas e modernas para cuidar da sua recuperação e do seu bem-estar.</p>
     </div>
-    <div class="bento">
-      <article class="card c-fisio rv">
+    <div class="stack" id="stack">
+      <article class="card" style="--k:0">
         <div class="ph"><picture><source srcset="assets/img/fisio-bola.webp" type="image/webp"><img src="assets/img/fisio-bola.jpg" width="1074" height="1130" alt="Atendimento de fisioterapia com bola suíça" loading="lazy" style="object-position:50% 62%"></picture></div>
         <div class="tx">
+          <p class="idx">01 <i>/ 06</i></p>
           <h3>Tratamento</h3>
           <p>Focando no alívio de dor, recuperação funcional, pós-cirúrgico, prevenção e na recuperação da mobilidade, flexibilidade e força, para melhorar a qualidade de vida e devolver a habilidade para as atividades de vida diária.</p>
-          <div class="tags"><span>Avaliação individual</span><span>Dor e lesões</span><span>Mobilidade</span></div>
+          <div class="tags"><span style="--t:0">Avaliação individual</span><span style="--t:1">Dor e lesões</span><span style="--t:2">Mobilidade</span></div>
         </div>
       </article>
-      <article class="card c-pilates rv" style="--i:1">
-        <div class="ph"><picture><source srcset="assets/img/aula-bolas.webp" type="image/webp"><img src="assets/img/aula-bolas.jpg" width="1100" height="603" alt="Aula em grupo no studio com bolas de exercício" loading="lazy" style="object-position:50% 40%"></picture></div>
+      <article class="card flip" style="--k:1">
+        <div class="ph"><picture><source srcset="assets/img/aula-bolas.webp" type="image/webp"><img src="assets/img/aula-bolas.jpg" width="1100" height="603" alt="Aula em grupo no studio com bolas de exercício" loading="lazy" style="object-position:40% 40%"></picture></div>
         <div class="tx">
+          <p class="idx">02 <i>/ 06</i></p>
           <h3>Pilates</h3>
           <p>Temos um espaço amplo,atendimento com 4 fisioterapeutas, Studio em um só atendimento em grupo e individual,com foco em dor crônica e patologias.proporcionando benefícios como melhora postural,alívio de dor ,consciência corporal,coordenação,ganho de força e melhora de mobilidade.</p>
-          <div class="tags"><span>Força</span><span>Postura</span><span>Equilíbrio</span></div>
+          <div class="tags"><span style="--t:0">Força</span><span style="--t:1">Postura</span><span style="--t:2">Equilíbrio</span></div>
         </div>
       </article>
-      <article class="card c-yoga rv">
+      <article class="card" style="--k:2">
         <div class="ph"><picture><source srcset="assets/img/yoga.webp" type="image/webp"><img src="assets/img/yoga.jpg" width="1074" height="1130" alt="Aula de Yoga na sala do studio" loading="lazy"></picture></div>
         <div class="tx">
-          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M12 4m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path pathLength="1" d="M4 20h4l1.5 -3"/><path pathLength="1" d="M17 20l-1 -5h-5l1 -7"/><path pathLength="1" d="M4 10l4 -1l4 -1l4 1.5l4 1.5"/></svg>
-          <h3>Yoga</h3>
+          <p class="idx">03 <i>/ 06</i></p>
+          <h3><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M12 4m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path pathLength="1" d="M4 20h4l1.5 -3"/><path pathLength="1" d="M17 20l-1 -5h-5l1 -7"/><path pathLength="1" d="M4 10l4 -1l4 -1l4 1.5l4 1.5"/></svg>Yoga</h3>
           <p>A prática de yoga proporciona uma conexão entre corpo, mente e alma. Ajuda a recuperar a calma e a consciência do seu Eu mais profundo. Melhora a saúde respiratória e mental, e a prática constante te faz entender e respeitar seus limites e, progressivamente, melhorar sua mobilidade, flexibilidade e força.</p>
-          <div class="tags"><span>Presencial</span><span>Online via Zoom</span><span>Individual ou em grupo</span></div>
+          <div class="tags"><span style="--t:0">Presencial</span><span style="--t:1">Online via Zoom</span><span style="--t:2">Individual ou em grupo</span></div>
         </div>
       </article>
-      <article class="card c-mass rv" style="--i:1">
+      <article class="card flip" style="--k:3">
         <div class="ph"><picture><source srcset="assets/img/massagem.webp" type="image/webp"><img src="assets/img/massagem.jpg" width="1200" height="897" alt="Massagem terapêutica nos ombros de uma paciente deitada na maca" loading="lazy" style="object-position:50% 40%"></picture></div>
         <div class="tx">
+          <p class="idx">04 <i>/ 06</i></p>
           <h3>Massagem</h3>
           <p>Massagem traz como benefícios alívio de dor e bem-estar, para que a rotina seja mais leve. Aqui no nosso espaço oferecemos massagem relaxante, massagem muscular, massagem com pedras quentes e drenagem linfática, todas em prol do alívio de dor e bem-estar.</p>
-          <div class="tags"><span>Relaxante</span><span>Muscular</span><span>Pedras quentes</span><span>Drenagem linfática</span></div>
+          <div class="tags"><span style="--t:0">Relaxante</span><span style="--t:1">Muscular</span><span style="--t:2">Pedras quentes</span><span style="--t:3">Drenagem linfática</span></div>
         </div>
       </article>
-      <article class="card c-acu rv">
+      <article class="card" style="--k:4">
         <div class="ph"><picture><source srcset="assets/img/acupuntura.webp" type="image/webp"><img src="assets/img/acupuntura.jpg" width="960" height="740" alt="Sessão de acupuntura no joelho de uma paciente" loading="lazy" style="object-position:40% 45%"></picture></div>
         <div class="tx">
+          <p class="idx">05 <i>/ 06</i></p>
           <h3>Acupuntura</h3>
           <p>Técnica para manejo de dores, redução do estresse e da ansiedade, promovendo bem-estar físico e mental.</p>
-          <div class="tags"><span>Dor</span><span>Estresse</span><span>Ansiedade</span></div>
+          <div class="tags"><span style="--t:0">Dor</span><span style="--t:1">Estresse</span><span style="--t:2">Ansiedade</span></div>
         </div>
       </article>
-      <article class="card c-laser rv" style="--i:1">
+      <article class="card flip" style="--k:5">
         <div class="ph"><picture><source srcset="assets/img/laser.webp" type="image/webp"><img src="assets/img/laser.jpg" width="960" height="900" alt="Aparelho de laserterapia em aplicação na perna" loading="lazy" style="object-position:50% 55%"></picture></div>
         <div class="tx">
+          <p class="idx">06 <i>/ 06</i></p>
           <h3>Laserterapia</h3>
           <p>Recurso terapêutico que utiliza luz para estimular os processos naturais de reparação dos tecidos. Pode auxiliar no alívio da dor, na modulação da inflamação, na cicatrização e na recuperação funcional, conforme a indicação clínica.</p>
           <p>É um tratamento não invasivo, indolor na maioria das aplicações, que complementa a fisioterapia para uma recuperação mais confortável e eficiente.</p>
-          <div class="tags"><span>Pós-cirúrgico estético</span><span>Pós-cirúrgico musculoesquelético</span><span>Úlceras de pressão</span><span>Lesões de pele</span><span>Tendinites</span><span>Inflamações</span></div>
+          <div class="tags"><span style="--t:0">Pós-cirúrgico estético</span><span style="--t:1">Pós-cirúrgico musculoesquelético</span><span style="--t:2">Úlceras de pressão</span><span style="--t:3">Lesões de pele</span><span style="--t:4">Tendinites</span><span style="--t:5">Inflamações</span></div>
         </div>
       </article>
     </div>
   </div>
 </section>
 
-<section class="voices" id="depoimentos" aria-labelledby="voices-title">
-  <div class="wrap">
+<!-- DEPOIMENTOS -->
+<section class="voices on-dark" id="depoimentos" aria-labelledby="voices-title">
+  <div class="v-band" aria-hidden="true">
+    <picture><source srcset="assets/img/aula-solo.webp" type="image/webp"><img src="assets/img/aula-solo.jpg" width="1074" height="1130" alt="" loading="lazy" id="vBandImg"></picture>
+  </div>
+  <div class="wrap head">
     <div class="sec-head">
       <div>
+        <p class="tag rv">Depoimentos</p>
         <h2 id="voices-title" class="rv">O que meus pacientes dizem</h2>
       </div>
       <p class="aside rv" style="--i:1">A confiança dos meus pacientes é a minha <strong>maior motivação</strong>.</p>
     </div>
     <div class="v-grid">
-      <figure class="voice big rv">
+      <figure class="voice big rv" data-speed="-.06">
         <div class="vq"><svg class="qmark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 5a5 5 0 0 0 -5 5v7a2 2 0 0 0 2 2h3a2 2 0 0 0 2 -2v-3a2 2 0 0 0 -2 -2h-2.9a3 3 0 0 1 2.9 -3a1 1 0 0 0 0 -2z"/><path d="M19 5a5 5 0 0 0 -5 5v7a2 2 0 0 0 2 2h3a2 2 0 0 0 2 -2v-3a2 2 0 0 0 -2 -2h-2.9a3 3 0 0 1 2.9 -3a1 1 0 0 0 0 -2z"/></svg>
         <blockquote>Depois que comecei o Pilates, minha postura melhorou e as dores nas costas praticamente desapareceram. Me sinto mais leve e equilibrada!</blockquote></div>
         <figcaption><b>Mariana S.</b>Gerente de RH</figcaption>
       </figure>
       <div class="v-side">
-        <figure class="voice rv" style="--i:1">
+        <figure class="voice rv" style="--i:1" data-speed=".05">
           <blockquote>O Pilates transformou meu corpo e minha mente. Hoje tenho mais força, flexibilidade e calma no dia a dia.</blockquote>
           <figcaption><b>Giovana R.</b>Empreendedora</figcaption>
         </figure>
-        <figure class="voice rv" style="--i:2">
+        <figure class="voice rv" style="--i:2" data-speed=".1">
           <blockquote>Cheguei cheia de dores e inseguranças. Com o acompanhamento certo, recuperei minha confiança e aprendi a respeitar meu corpo.</blockquote>
           <figcaption><b>Fernanda R.</b>Designer</figcaption>
         </figure>
@@ -520,14 +650,19 @@ Yogaterapia e meditação.</p>
   </div>
 </section>
 
+<!-- CONTATO -->
 <section class="contact" id="contato" aria-labelledby="contact-title">
   <div class="wrap">
     <div class="sec-head">
-      <h2 id="contact-title" class="rv">Dê o primeiro passo para cuidar do seu corpo.</h2>
+      <div>
+        <p class="tag rv">Contato</p>
+        <h2 id="contact-title" class="rv">Dê o primeiro passo para cuidar do seu corpo.</h2>
+      </div>
       <p class="aside rv" style="--i:1">Entre em contato pelo <strong>WhatsApp</strong> e vamos juntos construir um plano de tratamento para as suas necessidades.</p>
     </div>
     <div class="c-grid">
       <div class="info rv">
+        <p class="status" id="status"><i></i><span id="statusTxt">Atendimento presencial</span></p>
         <dl>
           <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" /></svg><div><dt>Endereço</dt><dd>Avenida Ester, 59 – Jardim Bela Vista III<br>Cosmópolis - SP, CEP 13157-070</dd></div></div>
           <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></svg><div><dt>WhatsApp</dt><dd><a href="https://wa.me/5519971013600" target="_blank" rel="noopener">(19) 97101-3600</a></dd></div></div>
@@ -546,6 +681,9 @@ Yogaterapia e meditação.</p>
 </main>
 
 <footer class="site-footer">
+  <div class="f-band" aria-hidden="true">
+    <picture><source srcset="assets/img/yoga.webp" type="image/webp"><img src="assets/img/yoga.jpg" width="1074" height="1130" alt="" loading="lazy" id="fBandImg"></picture>
+  </div>
   <div class="wrap">
     <div class="f-grid">
       <div>
@@ -571,77 +709,190 @@ Yogaterapia e meditação.</p>
   </div>
 </footer>
 
-<div class="m-cta"><a class="btn" href="https://wa.me/5519971013600" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></svg>Agendar avaliação</a></div>
+<div class="m-cta" id="mcta"><a class="btn" href="https://wa.me/5519971013600" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></svg>Agendar avaliação</a></div>
 
 <script>
 (() => {
+  const $ = (s, r = document) => r.querySelector(s);
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+  const span = (p, a, b) => clamp((p - a) / (b - a));
+  const ease = t => 1 - Math.pow(1 - t, 3);
+  // progresso de uma seção alta pelo viewport: 0 no topo, 1 quando o fim encosta embaixo
+  const prog = el => { const r = el.getBoundingClientRect(); return clamp(-r.top / (r.height - innerHeight)); };
 
-  // header sólido assim que a página rola
-  const header = document.querySelector('.site-header');
-  new IntersectionObserver(([e]) => header.classList.toggle('is-scrolled', !e.isIntersecting))
-    .observe(document.querySelector('.top-sentinel'));
+  /* ---------- header + barra do celular ---------- */
+  const header = $('.site-header'), mcta = $('#mcta'), hero = $('#inicio');
 
-  // lótus do hero desabrocha ao carregar
-  const heroLotus = document.getElementById('heroLotus');
-  requestAnimationFrame(() => setTimeout(() => heroLotus.classList.add('is-open'), 120));
+  /* ---------- hero: lótus → studio ---------- */
+  // miolo do logo na parede, medido na foto (fração da largura/altura)
+  const CX = .6389, CY = .4925, LOGO_W = .1023;
+  const stage = $('#stage'), photo = $('#heroPhoto'), shade = $('#heroShade'), lot = $('#heroLotus'), hint = $('#hint'), copy = $('.hero-copy');
+  let H = {};
+  const layoutHero = () => {
+    const vw = innerWidth, vh = hero.querySelector('.hero-stick').clientHeight, ar = 1170 / 780;
+    const mobile = vw <= 760;
+    // desktop: painel à direita com a altura inteira da foto; celular: foto ocupa a tela
+    const pw = mobile ? vw : Math.round(vw * .54), px = vw - pw;
+    photo.style.setProperty('--pw', pw + 'px');
+    // no celular a foto fica um pouco maior para a flor subir e não encostar no texto
+    const sw = Math.max(pw, vh * ar * (mobile ? 1.25 : 1)), sh = sw / ar;
+    const left = clamp(pw * (mobile ? .5 : .56) - sw * CX, pw - sw, 0);
+    const top = mobile ? clamp(vh * .34 - sh * CY, vh - sh, 0) : (vh - sh) / 2;
+    Object.assign(stage.style, { left: left + 'px', top: top + 'px', width: sw + 'px', height: sh + 'px' });
+    stage.style.setProperty('--ox', CX * 100 + '%'); stage.style.setProperty('--oy', CY * 100 + '%');
+    const cx = left + sw * CX, cy = top + sh * CY, logo = sw * LOGO_W;
+    const w0 = mobile ? Math.min(vw * .42, 190) : Math.min(vw * .24, 340);
+    H = { mobile, px, cx, cy, logo, z0: Math.max(1.3, w0 / logo), far: Math.hypot(Math.max(cx, pw - cx), Math.max(cy, vh - cy)) * 1.04 };
+    photo.style.setProperty('--cx', cx + 'px'); photo.style.setProperty('--cy', cy + 'px');
+  };
+  const heroFrame = () => {
+    const p = reduce ? 1 : prog(hero);
+    const r = ease(span(p, .05, .6));
+    const z = (H.z0 + (1 - H.z0) * r) * (1 + .05 * span(p, .6, 1));
+    stage.style.setProperty('--z', z.toFixed(4));
+    photo.style.setProperty('--rad', (H.far * r).toFixed(1) + 'px');
+    // a flor acompanha o logo da parede e some quando a foto abre
+    const w = H.logo * z, h = w * 336 / 464;
+    lot.style.setProperty('--lw', w.toFixed(1) + 'px');
+    lot.style.setProperty('--lx', (H.px + H.cx - w / 2).toFixed(1) + 'px');
+    lot.style.setProperty('--ly', (H.cy - h * .8).toFixed(1) + 'px');
+    lot.style.setProperty('--lo', (1 - span(r, .18, .5)).toFixed(3));
+    // celular: o texto fica sobre a foto, então clareia antes de o círculo chegar até ele
+    const sh = H.mobile ? span(r, .03, .2) : 0;
+    shade.style.setProperty('--shade', sh.toFixed(3));
+    hero.classList.toggle('dark', sh > .45);
+    hint.style.opacity = p > .03 ? 0 : 1;
+    copy.style.opacity = H.mobile ? (1 - span(p, .84, 1)).toFixed(3) : 1;
+    const past = scrollY > hero.offsetHeight - innerHeight - 40;
+    header.classList.toggle('solid', past || (!H.mobile && p > .02));
+    mcta.classList.toggle('show', p > .5 || past);
+  };
+  setTimeout(() => lot.classList.add('is-open'), 150);
 
-  // revelação ao rolar (uma vez por elemento)
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
-  document.querySelectorAll('.rv, .clip, .quote').forEach(el => io.observe(el));
-
-  // história: perguntas e respostas aparecem em sequência; a flor abre um par de pétalas por sinal
-  const story = document.getElementById('caminho');
-  const bubbles = [...story.querySelectorAll('.bubble')];
-  const photos = [...story.querySelectorAll('.story-photos img')];
-  const lotus = document.getElementById('storyLotus');
-  const num = document.getElementById('stepNum');
-  const wide = matchMedia('(min-width: 960px) and (min-height: 640px)');
+  /* ---------- caminho: perguntas aparecem em sequência; a flor abre um par de pétalas por sinal ---------- */
+  const story = $('#caminho'), bubbles = [...story.querySelectorAll('.bubble')];
+  const photos = [...story.querySelectorAll('.story-photos img')], sLotus = $('#storyLotus'), num = $('#stepNum');
+  const groups = [sLotus.querySelectorAll('.pb'), sLotus.querySelectorAll('.pa'), sLotus.querySelectorAll('.pc, .core')];
+  const wideStory = matchMedia('(min-width: 960px) and (min-height: 640px)');
   let step = -1;
-
-  const groups = [lotus.querySelectorAll('.pb'), lotus.querySelectorAll('.pa'), lotus.querySelectorAll('.pc'), lotus.querySelectorAll('.core')];
-  // lótus, foto e contador acompanham o passo da história
-  const paint = (s) => {
-    photos.forEach((p, i) => p.classList.toggle('on', i === Math.min(s, 2)));
+  const paint = s => {
+    photos.forEach((ph, i) => ph.classList.toggle('on', i === s));
     groups.forEach((g, i) => g.forEach(el => el.classList.toggle('open', i <= s)));
-    num.textContent = Math.min(s + 1, 3) + ' de 3';
+    num.textContent = (s + 1) + ' de 3';
   };
-  const setStep = (s) => {
-    if (s === step) return; step = s;
-    bubbles.forEach(b => b.classList.toggle('show', +b.dataset.s <= s));
-    paint(s);
+  const setStep = s => { if (s === step) return; step = s; bubbles.forEach(b => b.classList.toggle('show', +b.dataset.s <= s)); paint(s); };
+  let bubbleIO;
+  const setupStory = () => {
+    bubbleIO && bubbleIO.disconnect();
+    if (wideStory.matches && !reduce) { story.classList.add('pinned'); step = -1; setStep(0); return; }
+    story.classList.remove('pinned'); step = -1;
+    let reached = 0; paint(0);
+    bubbleIO = new IntersectionObserver(es => es.forEach(e => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('show'); bubbleIO.unobserve(e.target);
+      const s = +e.target.dataset.s; if (s > reached) { reached = s; paint(s); }
+    }), { rootMargin: '0px 0px -12% 0px' });
+    bubbles.forEach(b => { b.classList.remove('show'); bubbleIO.observe(b); });
+  };
+  const storyFrame = () => {
+    if (!story.classList.contains('pinned')) return;
+    const p = prog(story);
+    story.style.setProperty('--sp', p.toFixed(3));
+    setStep(Math.min(2, Math.floor(span(p, .04, .8) * 3)));
+  };
+  setupStory(); wideStory.addEventListener('change', setupStory);
+
+  /* ---------- a frase da parede acende palavra por palavra ---------- */
+  const wallQ = $('#wallQ'), wallImg = $('#wallImg');
+  wallQ.innerHTML = wallQ.textContent.split(' ').map(w => `<span>${w}</span>`).join(' ');
+  const words = [...wallQ.querySelectorAll('span')];
+  const wallFrame = () => {
+    const r = wallQ.getBoundingClientRect();
+    const p = reduce ? 1 : clamp((innerHeight * .85 - r.top) / (r.height + innerHeight * .35));
+    const n = Math.round(p * words.length);
+    words.forEach((w, i) => w.classList.toggle('lit', i < n));
+    wallImg.style.setProperty('--wz', (1.25 - .13 * p).toFixed(4));
   };
 
-  let markIO, bubbleIO;
-  const setupStory = () => {
-    markIO && markIO.disconnect(); bubbleIO && bubbleIO.disconnect();
-    if (wide.matches) {
-      story.classList.add('pinned');
-      const marks = [...story.querySelectorAll('.step-mark')];
-      markIO = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if (e.isIntersecting) setStep(+e.target.dataset.step); });
-      }, { rootMargin: '-49% 0px -50% 0px' });
-      marks.forEach(m => markIO.observe(m));
-      setStep(0);
-    } else {
-      // sem palco fixo: o lótus continua abrindo conforme cada pergunta entra na tela
-      story.classList.remove('pinned'); step = -1;
-      let reached = 0; paint(0);
-      bubbleIO = new IntersectionObserver((entries) => {
-        entries.forEach(e => {
-          if (!e.isIntersecting) return;
-          e.target.classList.add('show'); bubbleIO.unobserve(e.target);
-          const s = +e.target.dataset.s;
-          if (s > reached) { reached = s; paint(s); }
-        });
-      }, { rootMargin: '0px 0px -12% 0px' });
-      bubbles.forEach(b => { b.classList.remove('show'); bubbleIO.observe(b); });
-    }
+  /* ---------- parallax de fotos ---------- */
+  const para = [[$('#aboutImg'), -40], [$('#vBandImg'), -70], [$('#fBandImg'), -50]];
+  const paraFrame = () => {
+    if (reduce) return;
+    para.forEach(([img, k]) => {
+      const r = img.parentElement.parentElement.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > innerHeight) return;
+      img.style.setProperty('--py', (((r.top + r.height / 2) - innerHeight / 2) / innerHeight * k).toFixed(1) + 'px');
+    });
   };
-  setupStory();
-  wide.addEventListener('change', setupStory);
+
+  /* ---------- serviços: cartões se empilham; o de baixo recua ---------- */
+  const stackEl = $('#stack'), cards = [...stackEl.children];
+  const wideStack = matchMedia('(min-width: 960px) and (min-height: 700px)');
+  const setupStack = () => stackEl.classList.toggle('stacking', wideStack.matches && !reduce);
+  const stackFrame = () => {
+    if (!stackEl.classList.contains('stacking')) { cards.forEach(c => { c.style.removeProperty('--sc'); c.style.removeProperty('--dim'); }); return; }
+    cards.forEach((c, i) => {
+      const next = cards[i + 1]; if (!next) return;
+      const a = c.getBoundingClientRect(), b = next.getBoundingClientRect();
+      const k = clamp(1 - (b.top - a.top) / a.height);
+      c.style.setProperty('--sc', (1 - .05 * k).toFixed(4));
+      c.style.setProperty('--dim', (.28 * k).toFixed(3));
+    });
+  };
+  setupStack(); wideStack.addEventListener('change', setupStack);
+
+  /* ---------- depoimentos: cartões em velocidades diferentes ---------- */
+  const voices = [...document.querySelectorAll('.voice[data-speed]')];
+  const voiceFrame = () => {
+    if (reduce || innerWidth < 900) { voices.forEach(v => v.style.removeProperty('--vy')); return; }
+    voices.forEach(v => {
+      const r = v.getBoundingClientRect();
+      if (r.bottom < -200 || r.top > innerHeight + 200) return;
+      v.style.setProperty('--vy', ((r.top + r.height / 2 - innerHeight / 2) * +v.dataset.speed).toFixed(1) + 'px');
+    });
+  };
+
+  /* ---------- 10 anos: o número conta ---------- */
+  const years = $('#years');
+  const countUp = () => {
+    if (reduce) return;
+    const to = +years.dataset.n, t0 = performance.now();
+    const tick = t => { const k = clamp((t - t0) / 1400); years.textContent = Math.round(to * ease(k)); if (k < 1) requestAnimationFrame(tick); };
+    years.textContent = '0'; requestAnimationFrame(tick);
+  };
+
+  /* ---------- aberto agora (horário de Brasília) ---------- */
+  const status = $('#status'), stTxt = $('#statusTxt');
+  const setStatus = () => {
+    const parts = new Intl.DateTimeFormat('en-GB', { timeZone: 'America/Sao_Paulo', weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).formatToParts(new Date());
+    const get = t => parts.find(x => x.type === t).value;
+    const wd = get('weekday'), m = +get('hour') * 60 + +get('minute');
+    const monThu = ['Mon', 'Tue', 'Wed', 'Thu'].includes(wd), fri = wd === 'Fri';
+    const open = (monThu && m >= 420 && m < 1140) || (fri && m >= 480 && m < 780);
+    status.classList.toggle('open', open);
+    if (open) stTxt.textContent = monThu ? 'Studio aberto agora · até as 19h' : 'Studio aberto agora · até as 13h';
+    else if (monThu && m < 420) stTxt.textContent = 'Fechado agora · abre às 7h';
+    else if (fri && m < 480) stTxt.textContent = 'Fechado agora · abre às 8h';
+    else stTxt.textContent = 'Fechado agora · confira os horários';
+  };
+  setStatus(); setInterval(setStatus, 60000);
+
+  /* ---------- revelação ---------- */
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add('in'); io.unobserve(e.target);
+    if (e.target.id === 'about-title') countUp();
+  }), { rootMargin: '0px 0px -10% 0px', threshold: .12 });
+  document.querySelectorAll('.rv, .rv-clip, .card').forEach(el => io.observe(el));
+
+  /* ---------- loop ---------- */
+  let ticking = false;
+  const frame = () => { ticking = false; heroFrame(); storyFrame(); wallFrame(); paraFrame(); stackFrame(); voiceFrame(); };
+  const req = () => { if (!ticking) { ticking = true; requestAnimationFrame(frame); } };
+  addEventListener('scroll', req, { passive: true });
+  addEventListener('resize', () => { layoutHero(); req(); });
+  layoutHero(); frame();
 })();
 </script>
 </body>
