@@ -1,210 +1,635 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<!doctype html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raquel Simon Studio - Fisioterapia e Pilates</title>
-    <meta name="description" content="Raquel Simon Studio: Abordagens integradas de fisioterapia, pilates e terapias manuais para uma saúde plena.">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studio Raquel Simon | Pilates, Yoga e Fisioterapia em Cosmópolis</title>
+<meta name="description" content="Studio de Pilates e Fisioterapia em Cosmópolis. Fisioterapia, Pilates, Yoga presencial e online, Acupuntura e Massagem com a fisioterapeuta Raquel Simon. Agende sua avaliação pelo WhatsApp.">
+<meta property="og:title" content="Studio Raquel Simon | Pilates, Yoga e Fisioterapia">
+<meta property="og:description" content="Recupere sua qualidade de vida e bem-estar. Avenida Ester, 59, Jardim Bela Vista III, Cosmópolis - SP.">
+<meta property="og:image" content="assets/img/studio.jpg">
+<meta name="theme-color" content="#402665">
+<link rel="icon" href="assets/lotus.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/alegreya-sans-800-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/alegreya-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/img/hero-studio.webp" as="image" type="image/webp">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+@font-face{font-family:'Alegreya Sans';font-style:italic;font-weight:400;font-display:swap;src:url(assets/fonts/alegreya-sans-400i-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Alegreya Sans';font-style:italic;font-weight:400;font-display:swap;src:url(assets/fonts/alegreya-sans-400i-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Alegreya Sans';font-style:italic;font-weight:500;font-display:swap;src:url(assets/fonts/alegreya-sans-500i-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Alegreya Sans';font-style:italic;font-weight:500;font-display:swap;src:url(assets/fonts/alegreya-sans-500i-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Alegreya Sans';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/alegreya-sans-400-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Alegreya Sans';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/alegreya-sans-400-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Alegreya Sans';font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/alegreya-sans-500-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Alegreya Sans';font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/alegreya-sans-500-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Alegreya Sans';font-style:normal;font-weight:700;font-display:swap;src:url(assets/fonts/alegreya-sans-700-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Alegreya Sans';font-style:normal;font-weight:700;font-display:swap;src:url(assets/fonts/alegreya-sans-700-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Alegreya Sans';font-style:normal;font-weight:800;font-display:swap;src:url(assets/fonts/alegreya-sans-800-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Alegreya Sans';font-style:normal;font-weight:800;font-display:swap;src:url(assets/fonts/alegreya-sans-800-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+:root{
+  /* cores medidas no logotipo (flor de lótus) */
+  --deep:#402665;      /* pétalas externas */
+  --orchid:#945FA3;    /* pétalas internas */
+  --orchid-ink:#7A4C8A;/* orquídea escurecida p/ texto pequeno (AA) */
+  --cream:#F1EAD7;     /* miolo da flor */
+  --lilac:#C6C1E9;     /* fundo das artes do Instagram */
+  --lilac-soft:#EEECF8;
+  --paper:#FCFBFE;
+  --ink:#2B1F3D;
+  --muted:#5E5270;
+  --line:rgba(64,38,101,.14);
+  --ease-out:cubic-bezier(.23,1,.32,1);
+  --ease-io:cubic-bezier(.77,0,.175,1);
+  --r:18px;
+  --header:72px;
+  --pad:clamp(56px,6vw,88px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header) + 8px);-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Alegreya Sans',system-ui,sans-serif;font-size:19px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{margin:0;font-weight:800;line-height:1.08;letter-spacing:-.015em;color:var(--deep);text-wrap:balance}
+p{margin:0}
+.wrap{width:100%;max-width:1200px;margin-inline:auto;padding-inline:clamp(20px,5vw,40px)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--orchid);outline-offset:3px;border-radius:6px}
+
+/* ---------- botões ---------- */
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;background:var(--deep);color:var(--cream);font-weight:700;font-size:18px;text-decoration:none;white-space:nowrap;transition:transform 160ms var(--ease-out),background-color 200ms ease}
+.btn svg{width:20px;height:20px;flex:none}
+.btn:active{transform:scale(.97)}
+.btn--ghost{background:transparent;color:var(--deep);box-shadow:inset 0 0 0 2px var(--deep)}
+@media (hover:hover) and (pointer:fine){
+  .btn:hover{background:#523380}
+  .btn--ghost:hover{background:var(--lilac-soft)}
+}
+
+/* ---------- header ---------- */
+.top-sentinel{position:absolute;top:0;height:8px;width:1px}
+.site-header{position:sticky;top:0;z-index:50;height:var(--header);background:var(--paper);transition:box-shadow 200ms ease}
+.site-header.is-scrolled{box-shadow:0 1px 0 var(--line),0 8px 24px -16px rgba(64,38,101,.35)}
+.site-header .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:52px;height:auto}
+.brand b{display:block;font-size:24px;font-weight:700;color:var(--deep);line-height:1}
+.brand small{display:block;font-size:13px;color:var(--orchid-ink);line-height:1.2;margin-top:3px}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{font-weight:500;font-size:18px;text-decoration:none;color:var(--ink);padding:6px 0;background:linear-gradient(var(--orchid),var(--orchid)) 0 100%/0 2px no-repeat;transition:background-size 250ms var(--ease-out)}
+@media (hover:hover) and (pointer:fine){.nav a:hover{background-size:100% 2px}}
+.nav .btn{min-height:44px;padding:0 20px;font-size:17px;color:var(--cream);background:var(--deep)}
+@media (hover:hover) and (pointer:fine){.nav .btn:hover{background:#523380}}
+@media (max-width:959px){.nav a:not(.btn){display:none}}
+@media (max-width:599px){.nav .btn{display:none}.brand small{font-size:13px}}
+
+/* ---------- hero ---------- */
+.hero{padding-block:clamp(28px,4vw,56px) var(--pad)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:center}
+.hero-lotus{width:118px;margin-bottom:22px}
+.eyebrow{font-size:15px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orchid-ink);margin-bottom:14px}
+.hero h1{font-size:clamp(42px,4.4vw,62px);line-height:1.04}
+.hero h1 em{font-style:italic;font-weight:800;color:var(--orchid)}
+.hero .lead{font-size:clamp(20px,1.6vw,23px);color:var(--muted);max-width:36ch;margin-top:22px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.hero-photo{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/5;max-height:min(720px,calc(100svh - 140px));width:100%;justify-self:end;background:var(--lilac-soft)}
+.hero-photo picture{position:absolute;inset:0}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+@media (max-width:899px){
+  .hero .wrap{grid-template-columns:1fr}
+  .hero-lotus{width:84px;margin-bottom:16px}
+  .hero-photo{aspect-ratio:4/5;max-height:none;justify-self:stretch}
+}
+
+/* ---------- lótus (bloom) ---------- */
+.lotus svg{display:block;width:100%;height:auto;overflow:visible}
+.lotus .pt,.lotus .core{transform-box:view-box;transform-origin:232px 268.8px}
+.js .bloom .pt,.js .bloom .core{opacity:0}
+.js .bloom .pc{transform:translateY(34px) scale(.55)}
+.js .bloom .pa-r{transform:rotate(-42deg) scale(.7)}
+.js .bloom .pa-l{transform:rotate(42deg) scale(.7)}
+.js .bloom .pb-r{transform:rotate(-70deg) scale(.7)}
+.js .bloom .pb-l{transform:rotate(70deg) scale(.7)}
+.js .bloom .core{transform:scale(.8)}
+.bloom .pt,.bloom .core{transition:transform 1100ms var(--ease-out),opacity 700ms ease}
+.js .bloom.is-open .pt,.js .bloom.is-open .core,.js .bloom .open{opacity:1;transform:none}
+.bloom.is-open .pc{transition-delay:0ms}
+.bloom.is-open .pa{transition-delay:160ms}
+.bloom.is-open .pb{transition-delay:320ms}
+.bloom.is-open .core{transition-delay:560ms}
+
+/* ---------- revelação ao rolar ---------- */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity 700ms ease,transform 900ms var(--ease-out);transition-delay:calc(var(--i,0) * 70ms)}
+.js .rv.in{opacity:1;transform:none}
+.clip picture{display:block;width:100%;height:100%}
+.js .clip picture{clip-path:inset(0 0 100% 0);transition:clip-path 1300ms var(--ease-io)}
+.js .clip.in picture{clip-path:inset(0 0 0 0)}
+.js .hero .rv{transition-delay:calc(200ms + var(--i,0) * 80ms)}
+@supports (animation-timeline:view()){
+  @media (prefers-reduced-motion:no-preference){
+    .drift img{animation:drift linear both;animation-timeline:view();scale:1.08}
+    @keyframes drift{from{transform:translateY(-4%)}to{transform:translateY(4%)}}
+  }
+}
+
+/* ---------- história (perguntas) ---------- */
+.story{background:var(--lilac-soft);position:relative}
+.step-mark{position:absolute;left:0;width:1px;pointer-events:none}
+.story-stage{padding-block:var(--pad)}
+.story-head{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:32px;margin-bottom:28px}
+.story-head h2{font-size:clamp(32px,3.3vw,46px)}
+.story-head p{font-size:20px;color:var(--muted);margin-top:10px;max-width:62ch}
+.story-progress{display:flex;align-items:center;gap:16px}
+.story-progress .lotus{width:112px;position:relative}
+.story-progress .lotus .ghost{position:absolute;inset:0;opacity:.22;filter:saturate(0)}
+.story-progress .count{font-size:16px;color:var(--muted);line-height:1.3;white-space:nowrap}
+.story-progress .count b{display:block;font-size:30px;color:var(--deep);line-height:1}
+.story-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,4vw,56px);align-items:stretch}
+.story-photos{position:relative;border-radius:var(--r);overflow:hidden;background:var(--lilac);min-height:420px}
+.story-photos img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.04);transition:opacity 700ms ease,transform 1400ms var(--ease-out)}
+.story-photos img.on{opacity:1;transform:none}
+.no-js-photo .story-photos img:first-child,html:not(.js) .story-photos img:first-child{opacity:1;transform:none}
+.thread{display:flex;flex-direction:column;gap:14px;justify-content:center}
+.bubble{max-width:90%;padding:13px 20px;border-radius:22px;font-size:19px;line-height:1.4}
+.bubble.q{align-self:flex-start;background:#fff;color:var(--deep);font-weight:700;font-size:21px;border-bottom-left-radius:6px;box-shadow:0 1px 0 var(--line)}
+.bubble.a{align-self:flex-end;background:var(--deep);color:var(--cream);border-bottom-right-radius:6px}
+.bubble.a strong{color:#fff}
+.bubble.final{align-self:stretch;max-width:none;display:flex;align-items:center;gap:16px;background:var(--cream);color:var(--deep);font-size:23px;font-weight:700;font-style:italic;border-radius:22px;padding:16px 22px}
+.bubble.final img{width:46px;flex:none}
+.bubble.final span small{display:block;font-size:15px;font-style:normal;font-weight:500;color:var(--muted)}
+.js .thread .bubble{opacity:0;transform:translateY(18px) scale(.98);transition:opacity 450ms ease,transform 600ms var(--ease-out)}
+.js .thread .bubble.a{transform:translateY(18px) scale(.98)}
+.js .thread .bubble.show{opacity:1;transform:none}
+.story-mobile-photo{display:none}
+/* modo palco fixo: só em telas largas e altas o bastante */
+@media (min-width:960px) and (min-height:640px){
+  .story.pinned{height:320vh}
+  .story.pinned .story-stage{position:sticky;top:var(--header);height:calc(100vh - var(--header));display:flex;flex-direction:column;justify-content:center;padding-block:28px}
+}
+/* palco compacto: notebooks com pouca altura útil (ex.: 1366×768, 1920×1080 com zoom 125%) */
+@media (min-width:960px) and (min-height:640px) and (max-height:819px){
+  .story.pinned .story-stage{padding-block:14px}
+  .story.pinned .story-head{margin-bottom:14px}
+  .story.pinned .story-head h2{font-size:clamp(28px,2.5vw,36px)}
+  .story.pinned .story-head p{font-size:17px;margin-top:6px}
+  .story.pinned .story-progress .lotus{width:84px}
+  .story.pinned .story-progress .count b{font-size:24px}
+  .story.pinned .story-grid{flex:1;min-height:0}
+  .story.pinned .story-photos{min-height:0}
+  .story.pinned .thread{gap:8px}
+  .story.pinned .bubble{font-size:16px;padding:9px 16px;border-radius:18px}
+  .story.pinned .bubble.q{font-size:17px}
+  .story.pinned .bubble.final{font-size:18px;padding:11px 18px}
+  .story.pinned .bubble.final img{width:34px}
+  .story.pinned .bubble.final span small{font-size:13px}
+}
+@media (max-width:959px){
+  .story-head{grid-template-columns:1fr}
+  .story-progress{display:none}
+  .story-grid{grid-template-columns:1fr}
+  .story-photos{display:none}
+  .story-mobile-photo{display:block;border-radius:var(--r);overflow:hidden;margin-bottom:8px;aspect-ratio:4/3}
+  .story-mobile-photo img{width:100%;height:100%;object-fit:cover}
+  .bubble{max-width:94%;font-size:18px}
+  .bubble.q{font-size:19px}
+  .bubble.final{font-size:20px}
+}
+
+/* ---------- sobre ---------- */
+.about{padding-block:var(--pad)}
+.about .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,5vw,72px);align-items:stretch}
+.about-photo{border-radius:var(--r);overflow:hidden;min-height:520px;position:relative;background:var(--lilac-soft)}
+.about-photo picture{position:absolute;inset:0}
+.about-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%}
+.about-text{display:flex;flex-direction:column;justify-content:center;padding-block:8px}
+.about-text h2{font-size:clamp(36px,3.8vw,54px);max-width:16ch}
+.about-text .body{margin-top:26px;display:grid;gap:16px;font-size:20px;color:var(--muted);max-width:56ch}
+.about-text .body strong{color:var(--ink)}
+.quote{position:relative;margin:30px 0 0;padding:4px 0 4px 26px;font-size:clamp(22px,2vw,27px);line-height:1.35;font-style:italic;font-weight:500;color:var(--deep);max-width:34ch}
+.quote::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;border-radius:4px;background:var(--orchid);transform-origin:top}
+.js .quote::before{transform:scaleY(0);transition:transform 900ms var(--ease-out) 300ms}
+.js .quote.in::before{transform:none}
+.sign{margin-top:28px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.sign b{font-size:22px;color:var(--deep)}
+.sign span{font-size:17px;color:var(--muted)}
+.pendente{display:inline-block;font-size:14px;font-weight:700;letter-spacing:.02em;color:#8a3b12;background:#FFF1D6;border:1.5px dashed #c77d2e;border-radius:8px;padding:3px 10px;line-height:1.3}
+@media (max-width:899px){
+  .about .wrap{grid-template-columns:1fr}
+  .about-photo{min-height:0;aspect-ratio:4/5}
+}
+
+/* ---------- serviços ---------- */
+.services{padding-block:28px var(--pad)}
+.sec-head{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(28px,5vw,72px);align-items:end;margin-bottom:44px}
+.sec-head h2{font-size:clamp(36px,3.8vw,54px)}
+.sec-head .aside{font-size:clamp(20px,1.6vw,23px);line-height:1.5;color:var(--muted);border-left:3px solid var(--orchid);padding:2px 0 4px 24px}
+.sec-head .aside strong{color:var(--deep);font-weight:700}
+.voices .sec-head .aside{color:#d9d2ea;border-color:var(--lilac)}
+.voices .sec-head .aside strong{color:#fff}
+@media (max-width:899px){.sec-head{grid-template-columns:1fr;gap:18px}}
+.bento{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:20px}
+.card{border-radius:var(--r);background:#fff;box-shadow:0 0 0 1px var(--line);overflow:hidden;display:flex;flex-direction:column}
+.card .ph{position:relative;overflow:hidden;background:var(--lilac-soft)}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform 900ms var(--ease-out)}
+@media (hover:hover) and (pointer:fine){.card:hover .ph img{transform:scale(1.03)}}
+.card .tx{padding:26px 28px 30px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card h3{font-size:30px}
+.card p{font-size:19px;color:var(--muted)}
+.card .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:8px}
+.card .tags span{font-size:15px;font-weight:700;color:var(--deep);background:var(--lilac-soft);border-radius:999px;padding:5px 12px}
+.ico{width:46px;height:46px;flex:none;color:var(--deep)}
+.ico path{stroke-dasharray:1;stroke-dashoffset:0}
+.js .ico path{stroke-dashoffset:1;transition:stroke-dashoffset 1200ms var(--ease-out) 250ms}
+.js .in .ico path,.js .ico.in path{stroke-dashoffset:0}
+.c-fisio{grid-column:1 / 8}
+.c-pilates{grid-column:8 / 13}
+.c-fisio .ph,.c-pilates .ph{height:300px}
+.c-yoga{grid-column:1 / 8;grid-row:span 2;flex-direction:row}
+.c-yoga .ph{flex:0 0 46%}
+.c-acu{grid-column:8 / 13;background:var(--cream);box-shadow:none}
+.c-mass{grid-column:8 / 13;background:var(--lilac);box-shadow:none}
+.c-acu .tx,.c-mass .tx{flex-direction:row;align-items:flex-start;gap:20px}
+.c-acu .tx>div,.c-mass .tx>div{display:flex;flex-direction:column;gap:8px}
+.c-acu p,.c-mass p{color:#4c3f5f}
+.c-mass p{color:var(--ink)}
+@media (max-width:959px){
+  .bento{grid-template-columns:1fr}
+  .c-fisio,.c-pilates,.c-yoga,.c-acu,.c-mass{grid-column:1 / -1;grid-row:auto}
+  .c-yoga{flex-direction:column}
+  .c-yoga .ph{flex:none;height:300px}
+  .c-fisio .ph,.c-pilates .ph{height:240px}
+}
+
+/* ---------- depoimentos ---------- */
+.voices{background:var(--deep);color:var(--cream);padding-block:var(--pad)}
+.voices h2{color:var(--cream);font-size:clamp(34px,3.6vw,50px)}
+.voices .pendente{margin-top:18px}
+.v-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:20px;align-items:stretch}
+.v-side{display:grid;gap:20px}
+.voice{margin:0;border-radius:var(--r);background:rgba(241,234,215,.07);box-shadow:inset 0 0 0 1px rgba(241,234,215,.16);padding:30px 32px;display:flex;flex-direction:column;justify-content:space-between;gap:22px}
+.voice blockquote{margin:0;font-size:21px;line-height:1.45;font-style:italic}
+.voice.big blockquote{font-size:clamp(25px,2.4vw,32px);line-height:1.32}
+.voice.big{background:var(--orchid);box-shadow:none}
+.voice figcaption{font-size:17px;color:#d9d2ea}
+.voice figcaption b{display:block;font-size:19px;color:#fff}
+.voice.big figcaption{color:#f3ecff}
+.qmark{width:44px;height:44px;color:var(--lilac);margin-bottom:14px}
+.voice.big .qmark{color:var(--cream)}
+@media (max-width:899px){.v-grid{grid-template-columns:1fr}}
+
+/* ---------- contato ---------- */
+.contact{padding-block:var(--pad)}
+.contact .sec-head{margin-bottom:36px}
+.c-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:20px;align-items:stretch}
+.info{border-radius:var(--r);background:var(--lilac-soft);padding:32px;display:flex;flex-direction:column;gap:22px}
+.info dl{margin:0;display:grid;gap:20px}
+.info .row{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start}
+.info .row svg{width:26px;height:26px;color:var(--orchid-ink);margin-top:4px}
+.info dt{font-size:15px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--orchid-ink)}
+.info dd{margin:2px 0 0;font-size:20px;color:var(--ink)}
+.info dd a{text-decoration:none;border-bottom:1.5px solid var(--lilac)}
+.info .btn{margin-top:auto;align-self:flex-start}
+.map{border-radius:var(--r);overflow:hidden;min-height:440px;background:var(--lilac-soft);position:relative}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:saturate(.85)}
+@media (max-width:899px){.c-grid{grid-template-columns:1fr}.map{min-height:320px}}
+
+/* ---------- rodapé ---------- */
+.site-footer{background:#2a1944;color:#d9d2ea;padding-block:56px 30px;font-size:17px}
+.f-grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start}
+.f-brand{display:flex;gap:14px;align-items:center}
+.f-brand img{width:56px}
+.f-brand b{display:block;font-size:24px;color:#fff;line-height:1}
+.f-brand small{font-size:14px;color:var(--lilac)}
+.f-grid p{margin-top:16px;max-width:36ch}
+.f-grid h3{font-size:15px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--lilac);margin-bottom:12px}
+.f-grid ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.f-grid a{text-decoration:none;color:#fff}
+@media (hover:hover) and (pointer:fine){.f-grid a:hover{color:var(--lilac)}}
+.f-bottom{margin-top:44px;padding-top:22px;border-top:1px solid rgba(198,193,233,.18);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:15px}
+.credit{display:inline-flex;flex-wrap:wrap;align-items:center;gap:7px;text-decoration:none;color:#d9d2ea}
+.credit img{width:auto;height:22px}
+.credit strong{color:#fff;font-weight:700}
+@media (max-width:899px){.f-grid{grid-template-columns:1fr}}
+
+/* ---------- barra fixa no celular ---------- */
+.m-cta{display:none}
+@media (max-width:599px){
+  body{padding-bottom:84px}
+  .m-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(252,251,254,.97);box-shadow:0 -1px 0 var(--line)}
+  .m-cta .btn{width:100%;justify-content:center}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .js .rv,.js .thread .bubble{transform:none;transition:opacity 300ms ease}
+  .js .clip picture{clip-path:none}
+  .js .bloom .pt,.js .bloom .core{transform:none;transition:opacity 400ms ease}
+  .story-photos img{transform:none}
+  .js .quote::before{transform:none}
+  .js .ico path{stroke-dashoffset:0}
+}
+</style>
 </head>
-<body class="bg-background-light text-text-dark font-sans leading-relaxed">
-
-    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-md">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#inicio" class="flex items-center">
-                <img src="logo.png" alt="Logotipo Raquel Simon Studio" class="h-12 md:h-14 w-auto">
-            </a>
-
-            <nav class="hidden lg:flex items-center space-x-10">
-                <a href="#inicio" class="nav-link">Início</a>
-                <a href="#sobre" class="nav-link">Sobre</a>
-                <a href="#servicos" class="nav-link">Serviços</a>
-            </nav>
-
-            <button id="mobile-menu-button" class="lg:hidden focus:outline-none">
-                <i data-lucide="menu" class="w-8 h-8"></i>
-            </button>
-        </div>
-        
-        <div id="mobile-menu" class="hidden lg:hidden bg-white text-text-dark">
-            <nav class="flex flex-col items-center space-y-6 py-8">
-                <a href="#inicio" class="nav-link text-lg">Início</a>
-                <a href="#sobre" class="nav-link text-lg">Sobre</a>
-                <a href="#servicos" class="nav-link text-lg">Serviços</a>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <section id="inicio" class="min-h-screen flex items-center bg-cover bg-center" style="background-image: url('header.jpg');">
-            <div class="absolute inset-0 bg-black/30"></div>
-            <div class="container mx-auto px-6 text-center relative z-10">
-                <div class="animated-section">
-                    <h1 class="font-serif text-5xl md:text-7xl font-bold text-white leading-tight mb-6">
-                        Recupere sua qualidade de vida e bem-estar.
-                    </h1>
-                    <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-3xl mx-auto">
-                        Abordagens integradas de fisioterapia, pilates e terapias manuais para uma saúde plena.
-                    </p>
-                    <!-- TODO: Substituir o número de telefone no link abaixo pelo número real do cliente -->
-                    <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" class="bg-primary text-white px-10 py-4 rounded-md hover:bg-secondary transition-colors duration-300 font-bold text-base tracking-wider uppercase">
-                        Agende sua Avaliação
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section id="sobre" class="py-24 md:py-32">
-            <div class="animated-section container mx-auto px-6">
-                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-                    <div class="relative">
-                         <div class="w-full h-full bg-primary/10 rounded-2xl absolute -bottom-4 -right-4 transform rotate-2"></div>
-                         <img src="raquel_simon.jpg" alt="Foto de Raquel Simon" class="relative z-10 w-full h-auto object-cover rounded-2xl shadow-xl">
-                    </div>
-                    <div>
-                        <h2 class="font-serif text-4xl md:text-5xl font-bold text-text-dark mb-6">Mais de 10 anos dedicados à sua saúde e bem-estar.</h2>
-                        <div class="space-y-4 text-gray-600 text-lg">
-                           <p>Raquel Simon, fisioterapeuta com mais de 10 anos de experiência na área da saúde. Desde a minha formação, sempre fui apaixonada por ajudar as pessoas a recuperarem sua qualidade de vida, aliviando dores e promovendo o bem-estar.</p>
-                           <p>Ao longo da minha trajetória, me especializei em diversas áreas e utilizo técnicas modernas e personalizadas para cada paciente.</p>
-                           <blockquote class="quote my-6">
-                               "Meu objetivo é proporcionar um atendimento humanizado e eficiente, sempre focando na melhora da sua qualidade de vida."
-                           </blockquote>
-                        </div>
-                        <div class="mt-8">
-                             <a href="#servicos" class="font-bold text-primary hover:text-secondary transition-colors duration-300 text-lg">Conheça as especialidades &rarr;</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="servicos" class="py-24 md:py-32 bg-white">
-            <div class="animated-section container mx-auto px-6">
-                <div class="text-center mb-16 max-w-3xl mx-auto">
-                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-text-dark mb-4">Uma Abordagem Completa para sua Saúde</h2>
-                    <p class="text-lg text-gray-600">Oferecemos uma abordagem integrada para sua saúde, combinando técnicas consagradas e modernas para garantir sua recuperação e bem-estar.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="service-card text-center p-8 rounded-2xl border border-gray-200 hover:shadow-xl transition-shadow duration-300">
-                        <div class="inline-block bg-primary/10 text-primary p-4 rounded-full mb-6"><i data-lucide="heart-pulse" class="w-10 h-10"></i></div>
-                        <h3 class="text-2xl font-bold font-serif text-text-dark mb-3">Fisioterapia</h3>
-                        <p class="text-gray-600">Tratamento e prevenção de lesões musculoesqueléticas, focando na causa para restaurar sua mobilidade sem dor.</p>
-                    </div>
-                    <div class="service-card text-center p-8 rounded-2xl border border-gray-200 hover:shadow-xl transition-shadow duration-300">
-                        <div class="inline-block bg-primary/10 text-primary p-4 rounded-full mb-6"><i data-lucide="move" class="w-10 h-10"></i></div>
-                        <h3 class="text-2xl font-bold font-serif text-text-dark mb-3">Pilates</h3>
-                        <p class="text-gray-600">Fortalecimento do core, melhora da postura e aumento da flexibilidade com acompanhamento individualizado.</p>
-                    </div>
-                    <div class="service-card text-center p-8 rounded-2xl border border-gray-200 hover:shadow-xl transition-shadow duration-300">
-                        <div class="inline-block bg-primary/10 text-primary p-4 rounded-full mb-6"><i data-lucide="target" class="w-10 h-10"></i></div>
-                        <h3 class="text-2xl font-bold font-serif text-text-dark mb-3">Acupuntura</h3>
-                        <p class="text-gray-600">Técnica para manejo de dores, redução do estresse e ansiedade, promovendo bem-estar físico e mental.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="testimonials" class="py-24 md:py-32 bg-primary/5">
-             <div class="animated-section container mx-auto px-6">
-                <div class="text-center mb-16 max-w-3xl mx-auto">
-                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-text-dark mb-4">O que meus pacientes dizem</h2>
-                    <p class="text-lg text-gray-600">A confiança e os resultados dos meus pacientes são minha maior motivação.</p>
-                </div>
-                <div class="testimonial-slider relative max-w-3xl mx-auto text-center">
-                    <div class="testimonial-item hidden opacity-0 transition-opacity duration-1000 ease-in-out">
-                         <img src="paciente_1.jpg" alt="Foto do Paciente" class="w-24 h-24 rounded-full mx-auto mb-6 shadow-lg">
-                         <p class="text-xl italic text-gray-700 mb-6">"Depois que comecei o Pilates, minha postura melhorou e as dores nas costas praticamente desapareceram. Me sinto mais leve e equilibrada!"</p>
-                         <h4 class="font-bold text-lg text-primary">Mariana S.</h4>
-                         <p class="text-gray-500">Gerente de RH</p>
-                    </div>
-                     <div class="testimonial-item hidden opacity-0 transition-opacity duration-1000 ease-in-out">
-                         <img src="paciente_2.jpg" alt="Foto do Paciente" class="w-24 h-24 rounded-full mx-auto mb-6 shadow-lg">
-                         <p class="text-xl italic text-gray-700 mb-6">"O Pilates transformou meu corpo e minha mente. Hoje tenho mais força, flexibilidade e calma no dia a dia."</p>
-                         <h4 class="font-bold text-lg text-primary">Giovana R.</h4>
-                         <p class="text-gray-500">Empreendedor</p>
-                    </div>
-                     <div class="testimonial-item hidden opacity-0 transition-opacity duration-1000 ease-in-out">
-                         <img src="paciente_3.jpg" alt="Foto do Paciente" class="w-24 h-24 rounded-full mx-auto mb-6 shadow-lg">
-                         <p class="text-xl italic text-gray-700 mb-6">"Cheguei cheia de dores e inseguranças. Com o acompanhamento certo, recuperei minha confiança e aprendi a respeitar meu corpo."</p>
-                         <h4 class="font-bold text-lg text-primary">Fernanda R.</h4>
-                         <p class="text-gray-500">Designer</p>
-                    </div>
-                </div>
-             </div>
-        </section>
-
-        <section id="contato" class="py-24 md:py-32 bg-white">
-            <div class="animated-section container mx-auto px-6">
-                 <div class="text-center mb-16 max-w-3xl mx-auto">
-                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-text-dark mb-4">Dê o primeiro passo para uma vida sem dor.</h2>
-                    <p class="text-lg text-gray-600">Entre em contato pelo WhatsApp e vamos juntos construir um plano de tratamento para suas necessidades.</p>
-                </div>
-                <div class="max-w-2xl mx-auto bg-background-light p-8 md:p-12 rounded-2xl">
-                    <div>
-                        <h3 class="font-serif text-3xl font-bold text-text-dark mb-6">Informações</h3>
-                        <div class="space-y-6">
-                            <div class="flex items-start"><i data-lucide="map-pin" class="w-6 h-6 text-primary mt-1 mr-4 shrink-0"></i><div><h4 class="font-bold">Endereço</h4><p class="text-gray-600">Rua 7 de Setembro, 647 Cosmópolis - SP</p></div></div>
-                            <div class="flex items-start"><i data-lucide="phone" class="w-6 h-6 text-primary mt-1 mr-4 shrink-0"></i><div><h4 class="font-bold">Telefone / WhatsApp</h4><p class="text-gray-600">(19) 3872-3600</p></div></div>
-                            <div class="flex items-start"><i data-lucide="clock" class="w-6 h-6 text-primary mt-1 mr-4 shrink-0"></i><div><h4 class="font-bold">Horário</h4><p class="text-gray-600">Segunda a Sexta: 08:00 - 19:00</p></div></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-background-dark text-gray-300">
-        <div class="container mx-auto px-6 py-16">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-                <div>
-                    <img src="logo.png" alt="Logotipo Raquel Simon Studio" class="h-14 w-auto mb-4">
-                    <p class="text-gray-400">Recuperando sua qualidade de vida e bem-estar através do movimento consciente.</p>
-                </div>
-                <div>
-                    <h4 class="font-bold text-white text-lg mb-4 tracking-wider">Links Rápidos</h4>
-                    <nav class="flex flex-col space-y-3">
-                        <a href="#inicio" class="text-gray-400 hover:text-white transition-colors">Início</a>
-                        <a href="#sobre" class="text-gray-400 hover:text-white transition-colors">Sobre</a>
-                        <a href="#servicos" class="text-gray-400 hover:text-white transition-colors">Serviços</a>
-                    </nav>
-                </div>
-                <div>
-                    <h4 class="font-bold text-white text-lg mb-4 tracking-wider">Contato</h4>
-                    <div class="space-y-3 text-gray-400">
-                        <p class="flex items-start"><i data-lucide="map-pin" class="w-5 h-5 mr-3 mt-1 shrink-0"></i> Rua 7 de Setembro, 647 Cosmópolis - SP</p>
-                        <p class="flex items-start"><i data-lucide="phone" class="w-5 h-5 mr-3 mt-1 shrink-0"></i> (19) 3872-3600</p>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="font-bold text-white text-lg mb-4 tracking-wider">Siga-nos</h4>
-                     <div class="flex space-x-4 mt-4">
-                        <a href="@studioraquelsimon" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="instagram" class="w-6 h-6"></i></a>
-                        <a href="@studioraquelsimon" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="facebook" class="w-6 h-6"></i></a>
-                        <a href="https://www.youtube.com/studioraquelsimon" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="youtube" class="w-6 h-6"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="mt-16 border-t border-gray-800 pt-8 text-center text-gray-500">
-                <p>&copy; 2025 Raquel Simon Studio. Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- WhatsApp Floating Icon -->
-    <!-- TODO: Substituir o número de telefone no link abaixo pelo número real do cliente -->
-    <a href="https://wa.me/551938723600" target="_blank" rel="noopener noreferrer" title="Fale conosco pelo WhatsApp" class="fixed bottom-6 right-6 bg-primary text-white p-4 rounded-full shadow-lg hover:bg-secondary transition-transform duration-300 hover:scale-110 z-50 flex items-center justify-center">
-        <svg fill="currentColor" viewBox="0 0 24 24" class="w-8 h-8">
-            <path d="M16.75,13.96C17,14.21,17.21,14.5,17.2,14.86C17.2,15.22,17.1,15.5,17,15.76C16.8,16.27,16.26,16.64,15.79,16.76C15.32,16.88,14.63,17,12.45,16.1C10.15,15.11,8.61,13.5,7.76,12.23C7.22,11.5,7,10.64,7.28,10.03C7.53,9.45,7.95,9.13,8.4,8.9C8.85,8.68,9.15,8.67,9.39,8.95C9.62,9.23,9.86,9.58,10.05,9.85C10.23,10.13,10.26,10.27,10.16,10.45C10.06,10.63,9.68,11.09,9.37,11.45C9.06,11.8,8.81,12,9.06,12.3C9.3,12.6,9.91,13.25,10.5,13.73C11.5,14.54,12.21,14.74,12.56,14.86C12.91,14.98,13.11,14.93,13.3,14.67C13.5,14.42,14.04,13.67,14.26,13.37C14.47,13.07,14.7,12.96,14.95,13.06C15.2,13.16,16.23,13.71,16.5,13.83C16.77,13.95,16.89,14,16.75,13.96M12,2A10,10,0,0,0,2,12A10,10,0,0,0,12,22C13.66,22,15.25,21.5,16.63,20.6L22,22L20.5,16.75C21.5,15.3,22,13.7,22,12A10,10,0,0,0,12,2Z"></path>
-        </svg>
+<body>
+<span class="top-sentinel" aria-hidden="true"></span>
+<header class="site-header" id="topo">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Studio Raquel Simon, início">
+      <img src="assets/lotus.svg" alt="" width="52" height="38">
+      <span><b>Raquel Simon</b><small>Studio de Pilates e Fisioterapia</small></span>
     </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#contato">Contato</a>
+      <a class="btn" href="https://wa.me/5519971013600" target="_blank" rel="noopener">Agendar avaliação</a>
+    </nav>
+  </div>
+</header>
 
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script type="module" src="script.js"></script>
+<main>
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <div>
+      <div class="lotus hero-lotus bloom" id="heroLotus" aria-hidden="true"><svg viewBox="0 0 464 336"><g class="pt pb pb-r"><ellipse cx="344.8" cy="220.0" rx="53.0" ry="102.2" transform="rotate(-91.2 344.8 220.0)" fill="#402665"/><ellipse cx="331.5" cy="222.5" rx="41.0" ry="72.5" transform="rotate(-95.8 331.5 222.5)" fill="#945FA3"/></g><g class="pt pb pb-l"><ellipse cx="119.2" cy="220.0" rx="53.0" ry="102.2" transform="rotate(91.2 119.2 220.0)" fill="#402665"/><ellipse cx="132.5" cy="222.5" rx="41.0" ry="72.5" transform="rotate(95.8 132.5 222.5)" fill="#945FA3"/></g><g class="pt pa pa-r"><ellipse cx="322.0" cy="134.0" rx="51.5" ry="90.5" transform="rotate(44.0 322.0 134.0)" fill="#402665"/><ellipse cx="307.2" cy="151.2" rx="41.8" ry="70.2" transform="rotate(40.0 307.2 151.2)" fill="#945FA3"/></g><g class="pt pa pa-l"><ellipse cx="142.0" cy="134.0" rx="51.5" ry="90.5" transform="rotate(-44.0 142.0 134.0)" fill="#402665"/><ellipse cx="156.8" cy="151.2" rx="41.8" ry="70.2" transform="rotate(-40.0 156.8 151.2)" fill="#945FA3"/></g><g class="pt pc"><ellipse cx="232.0" cy="118.0" rx="53.8" ry="115.0" transform="rotate(0.0 232.0 118.0)" fill="#402665"/><ellipse cx="232.0" cy="152.5" rx="47.2" ry="105.5" transform="rotate(0.0 232.0 152.5)" fill="#945FA3"/></g><g class="core"><circle cx="232" cy="273.3" r="53.7" fill="#402665"/><circle cx="232" cy="268.8" r="49.0" fill="#F1EAD7"/></g></svg></div>
+      <p class="eyebrow rv" style="--i:0">Pilates, Yoga e Fisioterapia em Cosmópolis</p>
+      <h1 class="rv" style="--i:1">Recupere sua qualidade de vida e <em>bem-estar.</em></h1>
+      <p class="lead rv" style="--i:2">Abordagens integradas de fisioterapia, pilates e terapias manuais para uma saúde plena.</p>
+      <div class="ctas rv" style="--i:3">
+        <a class="btn" href="https://wa.me/5519971013600" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></svg>Agendar avaliação</a>
+        <a class="btn btn--ghost" href="#servicos">Ver serviços</a>
+      </div>
+    </div>
+    <figure class="hero-photo clip" style="margin:0">
+      <picture>
+        <source srcset="assets/img/hero-studio.webp" type="image/webp">
+        <img src="assets/img/hero-studio.jpg" width="1100" height="1375" alt="Alunas alongando nos aparelhos de Pilates do Studio Raquel Simon, com o logotipo da flor de lótus na parede" fetchpriority="high">
+      </picture>
+    </figure>
+  </div>
+</section>
+
+<section class="story" id="caminho" aria-labelledby="story-title">
+  <span class="step-mark" data-step="0" style="top:0;height:24%"></span>
+  <span class="step-mark" data-step="1" style="top:24%;height:22%"></span>
+  <span class="step-mark" data-step="2" style="top:46%;height:20%"></span>
+  <span class="step-mark" data-step="3" style="top:66%;height:34%"></span>
+  <div class="story-stage">
+    <div class="wrap">
+      <div class="story-head">
+        <div>
+          <h2 id="story-title" class="rv">Perguntas que valem a pena você se fazer.</h2>
+          <p class="rv" style="--i:1">É assim que o cuidado começa no studio: entendendo o que está por trás da dor, antes de qualquer exercício.</p>
+        </div>
+        <div class="story-progress" aria-hidden="true">
+          <div class="lotus">
+            <svg class="ghost" viewBox="0 0 464 336"><g class="pt pb pb-r"><ellipse cx="344.8" cy="220.0" rx="53.0" ry="102.2" transform="rotate(-91.2 344.8 220.0)" fill="#402665"/><ellipse cx="331.5" cy="222.5" rx="41.0" ry="72.5" transform="rotate(-95.8 331.5 222.5)" fill="#945FA3"/></g><g class="pt pb pb-l"><ellipse cx="119.2" cy="220.0" rx="53.0" ry="102.2" transform="rotate(91.2 119.2 220.0)" fill="#402665"/><ellipse cx="132.5" cy="222.5" rx="41.0" ry="72.5" transform="rotate(95.8 132.5 222.5)" fill="#945FA3"/></g><g class="pt pa pa-r"><ellipse cx="322.0" cy="134.0" rx="51.5" ry="90.5" transform="rotate(44.0 322.0 134.0)" fill="#402665"/><ellipse cx="307.2" cy="151.2" rx="41.8" ry="70.2" transform="rotate(40.0 307.2 151.2)" fill="#945FA3"/></g><g class="pt pa pa-l"><ellipse cx="142.0" cy="134.0" rx="51.5" ry="90.5" transform="rotate(-44.0 142.0 134.0)" fill="#402665"/><ellipse cx="156.8" cy="151.2" rx="41.8" ry="70.2" transform="rotate(-40.0 156.8 151.2)" fill="#945FA3"/></g><g class="pt pc"><ellipse cx="232.0" cy="118.0" rx="53.8" ry="115.0" transform="rotate(0.0 232.0 118.0)" fill="#402665"/><ellipse cx="232.0" cy="152.5" rx="47.2" ry="105.5" transform="rotate(0.0 232.0 152.5)" fill="#945FA3"/></g><g class="core"><circle cx="232" cy="273.3" r="53.7" fill="#402665"/><circle cx="232" cy="268.8" r="49.0" fill="#F1EAD7"/></g></svg>
+            <div class="bloom" id="storyLotus"><svg viewBox="0 0 464 336"><g class="pt pb pb-r"><ellipse cx="344.8" cy="220.0" rx="53.0" ry="102.2" transform="rotate(-91.2 344.8 220.0)" fill="#402665"/><ellipse cx="331.5" cy="222.5" rx="41.0" ry="72.5" transform="rotate(-95.8 331.5 222.5)" fill="#945FA3"/></g><g class="pt pb pb-l"><ellipse cx="119.2" cy="220.0" rx="53.0" ry="102.2" transform="rotate(91.2 119.2 220.0)" fill="#402665"/><ellipse cx="132.5" cy="222.5" rx="41.0" ry="72.5" transform="rotate(95.8 132.5 222.5)" fill="#945FA3"/></g><g class="pt pa pa-r"><ellipse cx="322.0" cy="134.0" rx="51.5" ry="90.5" transform="rotate(44.0 322.0 134.0)" fill="#402665"/><ellipse cx="307.2" cy="151.2" rx="41.8" ry="70.2" transform="rotate(40.0 307.2 151.2)" fill="#945FA3"/></g><g class="pt pa pa-l"><ellipse cx="142.0" cy="134.0" rx="51.5" ry="90.5" transform="rotate(-44.0 142.0 134.0)" fill="#402665"/><ellipse cx="156.8" cy="151.2" rx="41.8" ry="70.2" transform="rotate(-40.0 156.8 151.2)" fill="#945FA3"/></g><g class="pt pc"><ellipse cx="232.0" cy="118.0" rx="53.8" ry="115.0" transform="rotate(0.0 232.0 118.0)" fill="#402665"/><ellipse cx="232.0" cy="152.5" rx="47.2" ry="105.5" transform="rotate(0.0 232.0 152.5)" fill="#945FA3"/></g><g class="core"><circle cx="232" cy="273.3" r="53.7" fill="#402665"/><circle cx="232" cy="268.8" r="49.0" fill="#F1EAD7"/></g></svg></div>
+          </div>
+          <p class="count"><b id="stepNum">1 de 3</b>sinais do corpo</p>
+        </div>
+      </div>
+      <div class="story-grid">
+        <div class="story-photos" aria-hidden="true">
+          <picture><source srcset="assets/img/fisio-bola.webp" type="image/webp"><img class="on" src="assets/img/fisio-bola.jpg" width="1074" height="1130" alt="" loading="lazy"></picture>
+          <picture><source srcset="assets/img/alongamento.webp" type="image/webp"><img src="assets/img/alongamento.jpg" width="1074" height="1130" alt="" loading="lazy"></picture>
+          <picture><source srcset="assets/img/aula-solo.webp" type="image/webp"><img src="assets/img/aula-solo.jpg" width="1074" height="1130" alt="" loading="lazy"></picture>
+        </div>
+        <div class="thread">
+          <figure class="story-mobile-photo" style="margin:0"><picture><source srcset="assets/img/fisio-bola.webp" type="image/webp"><img src="assets/img/fisio-bola.jpg" width="1074" height="1130" alt="Paciente em atendimento de fisioterapia com bola suíça na maca do studio" loading="lazy"></picture></figure>
+          <p class="bubble q" data-s="0">Você mudou seus hábitos por causa de uma dor?</p>
+          <p class="bubble a" data-s="0">Quando a dor passa a modificar sua rotina, o corpo está encontrando formas de compensar. <strong>Seu corpo não precisa se acostumar com a dor.</strong></p>
+          <p class="bubble q" data-s="1">Um movimento simples começou a exigir esforço?</p>
+          <p class="bubble a" data-s="1">Mais do que realizar o movimento, é preciso entender como o corpo está fazendo isso. <strong>Por isso, tudo começa com uma avaliação.</strong></p>
+          <p class="bubble q" data-s="2">Acha que precisa estar flexível para começar?</p>
+          <p class="bubble a" data-s="2">Não precisa esperar seu corpo estar perfeito para voltar a se movimentar. <strong>Comece de onde você está.</strong></p>
+          <p class="bubble final" data-s="3"><img src="assets/lotus.svg" alt="" width="46" height="33"><span>O corpo alcança o que a mente acredita.<small>A frase que está na parede do studio.</small></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="sobre" aria-labelledby="about-title">
+  <div class="wrap">
+    <figure class="about-photo clip" style="margin:0">
+      <picture>
+        <source srcset="assets/img/raquel.webp" type="image/webp">
+        <img src="assets/img/raquel.jpg" width="900" height="1125" alt="Raquel Simon, fisioterapeuta, de jaleco branco no studio" loading="lazy">
+      </picture>
+    </figure>
+    <div class="about-text">
+      <h2 id="about-title" class="rv">Mais de 10 anos dedicados à sua saúde e bem-estar.</h2>
+      <div class="body">
+        <p class="rv" style="--i:1">Sou <strong>Raquel Simon, fisioterapeuta</strong> com mais de 10 anos de experiência na área da saúde. Desde a minha formação, sempre fui apaixonada por ajudar as pessoas a recuperarem sua qualidade de vida, aliviando dores e promovendo o bem-estar.</p>
+        <p class="rv" style="--i:2">Ao longo da minha trajetória, me especializei em diversas áreas e utilizo técnicas modernas e personalizadas para cada paciente.</p>
+      </div>
+      <blockquote class="quote rv" style="--i:3">“Meu objetivo é proporcionar um atendimento humanizado e eficiente, sempre focando na melhora da sua qualidade de vida.”</blockquote>
+      <div class="sign rv" style="--i:4"><b>Raquel Simon</b><span>Fisioterapeuta</span><span class="pendente">CREFITO: número a confirmar</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="servicos" aria-labelledby="serv-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="serv-title" class="rv">Uma abordagem completa para sua saúde.</h2>
+      <p class="aside rv" style="--i:1">Oferecemos uma abordagem <strong>integrada</strong>, combinando técnicas consagradas e modernas para cuidar da sua recuperação e do seu bem-estar.</p>
+    </div>
+    <div class="bento">
+      <article class="card c-fisio rv">
+        <div class="ph"><picture><source srcset="assets/img/fisio-bola.webp" type="image/webp"><img src="assets/img/fisio-bola.jpg" width="1074" height="1130" alt="Atendimento de fisioterapia com bola suíça" loading="lazy" style="object-position:50% 62%"></picture></div>
+        <div class="tx">
+          <h3>Fisioterapia</h3>
+          <p>Tratamento e prevenção de lesões musculoesqueléticas, focando na causa para recuperar sua mobilidade e sua confiança nos movimentos.</p>
+          <div class="tags"><span>Avaliação individual</span><span>Dor e lesões</span><span>Mobilidade</span></div>
+        </div>
+      </article>
+      <article class="card c-pilates rv" style="--i:1">
+        <div class="ph"><picture><source srcset="assets/img/aula-bolas.webp" type="image/webp"><img src="assets/img/aula-bolas.jpg" width="1100" height="603" alt="Aula em grupo no studio com bolas de exercício" loading="lazy" style="object-position:50% 40%"></picture></div>
+        <div class="tx">
+          <h3>Pilates</h3>
+          <p>Fortalecimento do core, melhora da postura e aumento da flexibilidade, com acompanhamento individualizado.</p>
+          <div class="tags"><span>Força</span><span>Postura</span><span>Equilíbrio</span></div>
+        </div>
+      </article>
+      <article class="card c-yoga rv">
+        <div class="ph"><picture><source srcset="assets/img/yoga.webp" type="image/webp"><img src="assets/img/yoga.jpg" width="1074" height="1130" alt="Aula de Yoga na sala do studio" loading="lazy"></picture></div>
+        <div class="tx">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M12 4m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path pathLength="1" d="M4 20h4l1.5 -3"/><path pathLength="1" d="M17 20l-1 -5h-5l1 -7"/><path pathLength="1" d="M4 10l4 -1l4 -1l4 1.5l4 1.5"/></svg>
+          <h3>Yoga</h3>
+          <p>Respiração, equilíbrio, força, mobilidade e consciência corporal. Não é preciso ser flexível nem ter experiência para começar: a prática se adapta a cada pessoa.</p>
+          <div class="tags"><span>Presencial</span><span>Online via Zoom</span><span>Individual ou em grupo</span></div>
+        </div>
+      </article>
+      <article class="card c-acu rv" style="--i:1">
+        <div class="tx">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M3 21c-.667 -.667 3.262 -6.236 11.785 -16.709a3.5 3.5 0 1 1 5.078 4.791c-10.575 8.612 -16.196 12.585 -16.863 11.918z"/><path pathLength="1" d="M17.5 6.5l-1 1"/></svg>
+          <div><h3>Acupuntura</h3><p>Técnica para manejo de dores, redução do estresse e da ansiedade, promovendo bem-estar físico e mental.</p></div>
+        </div>
+      </article>
+      <article class="card c-mass rv" style="--i:2">
+        <div class="tx">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M4 17m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path pathLength="1" d="M9 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path pathLength="1" d="M4 22l4 -2v-3h12"/><path pathLength="1" d="M11 20h9"/><path pathLength="1" d="M8 14l3 -2l1 -4c3 1 3 4 3 6"/></svg>
+          <div><h3>Massagem</h3><p>Sessões de massagem no studio. Fale com a equipe pelo WhatsApp para conhecer as modalidades e os horários.</p></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="voices" id="depoimentos" aria-labelledby="voices-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2 id="voices-title" class="rv">O que meus pacientes dizem</h2>
+        <p class="pendente rv" style="--i:2">Depoimentos copiados do site anterior: confirmar autoria e autorização antes de publicar</p>
+      </div>
+      <p class="aside rv" style="--i:1">A confiança dos meus pacientes é a minha <strong>maior motivação</strong>.</p>
+    </div>
+    <div class="v-grid">
+      <figure class="voice big rv">
+        <div class="vq"><svg class="qmark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 5a5 5 0 0 0 -5 5v7a2 2 0 0 0 2 2h3a2 2 0 0 0 2 -2v-3a2 2 0 0 0 -2 -2h-2.9a3 3 0 0 1 2.9 -3a1 1 0 0 0 0 -2z"/><path d="M19 5a5 5 0 0 0 -5 5v7a2 2 0 0 0 2 2h3a2 2 0 0 0 2 -2v-3a2 2 0 0 0 -2 -2h-2.9a3 3 0 0 1 2.9 -3a1 1 0 0 0 0 -2z"/></svg>
+        <blockquote>Depois que comecei o Pilates, minha postura melhorou e as dores nas costas praticamente desapareceram. Me sinto mais leve e equilibrada!</blockquote></div>
+        <figcaption><b>Mariana S.</b>Gerente de RH</figcaption>
+      </figure>
+      <div class="v-side">
+        <figure class="voice rv" style="--i:1">
+          <blockquote>O Pilates transformou meu corpo e minha mente. Hoje tenho mais força, flexibilidade e calma no dia a dia.</blockquote>
+          <figcaption><b>Giovana R.</b>Empreendedora</figcaption>
+        </figure>
+        <figure class="voice rv" style="--i:2">
+          <blockquote>Cheguei cheia de dores e inseguranças. Com o acompanhamento certo, recuperei minha confiança e aprendi a respeitar meu corpo.</blockquote>
+          <figcaption><b>Fernanda R.</b>Designer</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contato" aria-labelledby="contact-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="contact-title" class="rv">Dê o primeiro passo para cuidar do seu corpo.</h2>
+      <p class="aside rv" style="--i:1">Entre em contato pelo <strong>WhatsApp</strong> e vamos juntos construir um plano de tratamento para as suas necessidades.</p>
+    </div>
+    <div class="c-grid">
+      <div class="info rv">
+        <dl>
+          <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" /></svg><div><dt>Endereço</dt><dd>Avenida Ester, 59 – Jardim Bela Vista III<br>Cosmópolis - SP, CEP 13157-070</dd></div></div>
+          <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></svg><div><dt>WhatsApp</dt><dd><a href="https://wa.me/5519971013600" target="_blank" rel="noopener">(19) 97101-3600</a></dd></div></div>
+          <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" /></svg><div><dt>Telefone</dt><dd><a href="tel:+551938723600">(19) 3872-3600</a></dd></div></div>
+          <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M12 7v5l3 3" /></svg><div><dt>Horário</dt><dd>Segunda a sexta, das 8h às 19h</dd></div></div>
+        </dl>
+        <a class="btn" href="https://wa.me/5519971013600" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></svg>Agendar avaliação</a>
+      </div>
+      <div class="map rv" style="--i:1">
+        <iframe title="Mapa: Avenida Ester, 59, Jardim Bela Vista III, Cosmópolis - SP" src="https://www.google.com/maps?q=Avenida%20Ester%2C%2059%2C%20Jardim%20Bela%20Vista%20III%2C%20Cosm%C3%B3polis%20-%20SP%2C%2013157-070&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <div class="f-brand"><img src="assets/lotus.svg" alt="" width="56" height="41"><span><b>Raquel Simon</b><small>Studio de Pilates e Fisioterapia</small></span></div>
+        <p>Recuperando sua qualidade de vida e bem-estar através do movimento consciente.</p>
+      </div>
+      <div>
+        <h3>Navegação</h3>
+        <ul><li><a href="#sobre">Sobre</a></li><li><a href="#servicos">Serviços</a></li><li><a href="#depoimentos">Depoimentos</a></li><li><a href="#contato">Contato</a></li></ul>
+      </div>
+      <div>
+        <h3>Redes</h3>
+        <ul>
+          <li><a href="https://www.instagram.com/studioraquelsimon/" target="_blank" rel="noopener">Instagram @studioraquelsimon</a></li>
+          <li><a href="https://wa.me/5519971013600" target="_blank" rel="noopener">WhatsApp (19) 97101-3600</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© 2026 Studio Raquel Simon. Todos os direitos reservados.</span>
+      <a class="credit" href="https://fernandoparmezani.com.br" target="_blank" rel="noopener">Site desenvolvido por <img src="assets/img/fp-logo.png" alt="" width="31" height="22"> <strong>Fernando Parmezani dos Reis</strong></a>
+    </div>
+  </div>
+</footer>
+
+<div class="m-cta"><a class="btn" href="https://wa.me/5519971013600" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></svg>Agendar avaliação</a></div>
+
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // header sólido assim que a página rola
+  const header = document.querySelector('.site-header');
+  new IntersectionObserver(([e]) => header.classList.toggle('is-scrolled', !e.isIntersecting))
+    .observe(document.querySelector('.top-sentinel'));
+
+  // lótus do hero desabrocha ao carregar
+  const heroLotus = document.getElementById('heroLotus');
+  requestAnimationFrame(() => setTimeout(() => heroLotus.classList.add('is-open'), 120));
+
+  // revelação ao rolar (uma vez por elemento)
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+  document.querySelectorAll('.rv, .clip, .quote').forEach(el => io.observe(el));
+
+  // história: perguntas e respostas aparecem em sequência; a flor abre um par de pétalas por sinal
+  const story = document.getElementById('caminho');
+  const bubbles = [...story.querySelectorAll('.bubble')];
+  const photos = [...story.querySelectorAll('.story-photos img')];
+  const lotus = document.getElementById('storyLotus');
+  const num = document.getElementById('stepNum');
+  const wide = matchMedia('(min-width: 960px) and (min-height: 640px)');
+  let step = -1;
+
+  const groups = [lotus.querySelectorAll('.pb'), lotus.querySelectorAll('.pa'), lotus.querySelectorAll('.pc'), lotus.querySelectorAll('.core')];
+  // lótus, foto e contador acompanham o passo da história
+  const paint = (s) => {
+    photos.forEach((p, i) => p.classList.toggle('on', i === Math.min(s, 2)));
+    groups.forEach((g, i) => g.forEach(el => el.classList.toggle('open', i <= s)));
+    num.textContent = Math.min(s + 1, 3) + ' de 3';
+  };
+  const setStep = (s) => {
+    if (s === step) return; step = s;
+    bubbles.forEach(b => b.classList.toggle('show', +b.dataset.s <= s));
+    paint(s);
+  };
+
+  let markIO, bubbleIO;
+  const setupStory = () => {
+    markIO && markIO.disconnect(); bubbleIO && bubbleIO.disconnect();
+    if (wide.matches) {
+      story.classList.add('pinned');
+      const marks = [...story.querySelectorAll('.step-mark')];
+      markIO = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) setStep(+e.target.dataset.step); });
+      }, { rootMargin: '-49% 0px -50% 0px' });
+      marks.forEach(m => markIO.observe(m));
+      setStep(0);
+    } else {
+      // sem palco fixo: o lótus continua abrindo conforme cada pergunta entra na tela
+      story.classList.remove('pinned'); step = -1;
+      let reached = 0; paint(0);
+      bubbleIO = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (!e.isIntersecting) return;
+          e.target.classList.add('show'); bubbleIO.unobserve(e.target);
+          const s = +e.target.dataset.s;
+          if (s > reached) { reached = s; paint(s); }
+        });
+      }, { rootMargin: '0px 0px -12% 0px' });
+      bubbles.forEach(b => { b.classList.remove('show'); bubbleIO.observe(b); });
+    }
+  };
+  setupStory();
+  wide.addEventListener('change', setupStory);
+})();
+</script>
 </body>
 </html>
