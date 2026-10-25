@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Studio Raquel Simon | Pilates, Yoga e Fisioterapia em Cosmópolis</title>
-<meta name="description" content="Studio de Pilates e Fisioterapia em Cosmópolis. Fisioterapia, Pilates, Yoga presencial e online, Acupuntura e Massagem com a fisioterapeuta Raquel Simon. Agende sua avaliação pelo WhatsApp.">
+<meta name="description" content="Studio de Pilates e Fisioterapia em Cosmópolis. Fisioterapia, Pilates, Yoga presencial e online, Acupuntura, Laserterapia e Massagem com a fisioterapeuta Raquel Simon. Agende sua avaliação pelo WhatsApp.">
 <meta property="og:title" content="Studio Raquel Simon | Pilates, Yoga e Fisioterapia">
 <meta property="og:description" content="Recupere sua qualidade de vida e bem-estar. Avenida Ester, 59, Jardim Bela Vista III, Cosmópolis - SP.">
 <meta property="og:image" content="assets/img/studio.jpg">
@@ -245,20 +245,19 @@ p{margin:0}
 .c-fisio{grid-column:1 / 8}
 .c-pilates{grid-column:8 / 13}
 .c-fisio .ph,.c-pilates .ph{height:300px}
-.c-yoga{grid-column:1 / 8;grid-row:span 2;flex-direction:row}
+.c-yoga{grid-column:1 / 8;flex-direction:row}
 .c-yoga .ph{flex:0 0 46%}
-.c-acu{grid-column:8 / 13;background:var(--cream);box-shadow:none}
-.c-mass{grid-column:8 / 13;background:var(--lilac);box-shadow:none}
-.c-acu .tx,.c-mass .tx{flex-direction:row;align-items:flex-start;gap:20px}
-.c-acu .tx>div,.c-mass .tx>div{display:flex;flex-direction:column;gap:8px}
-.c-acu p,.c-mass p{color:#4c3f5f}
-.c-mass p{color:var(--ink)}
+.c-mass{grid-column:8 / 13}
+.c-mass .ph{height:240px}
+.c-acu{grid-column:1 / 7}
+.c-laser{grid-column:7 / 13}
+.c-acu .ph,.c-laser .ph{height:280px}
 @media (max-width:959px){
   .bento{grid-template-columns:1fr}
-  .c-fisio,.c-pilates,.c-yoga,.c-acu,.c-mass{grid-column:1 / -1;grid-row:auto}
+  .c-fisio,.c-pilates,.c-yoga,.c-acu,.c-laser,.c-mass{grid-column:1 / -1;grid-row:auto}
   .c-yoga{flex-direction:column}
   .c-yoga .ph{flex:none;height:300px}
-  .c-fisio .ph,.c-pilates .ph{height:240px}
+  .c-fisio .ph,.c-pilates .ph,.c-mass .ph,.c-acu .ph,.c-laser .ph{height:240px}
 }
 
 /* ---------- depoimentos ---------- */
@@ -464,16 +463,29 @@ Yogaterapia e meditação.</p>
           <div class="tags"><span>Presencial</span><span>Online via Zoom</span><span>Individual ou em grupo</span></div>
         </div>
       </article>
-      <article class="card c-acu rv" style="--i:1">
+      <article class="card c-mass rv" style="--i:1">
+        <div class="ph"><picture><source srcset="assets/img/massagem.webp" type="image/webp"><img src="assets/img/massagem.jpg" width="1200" height="897" alt="Massagem terapêutica nos ombros de uma paciente deitada na maca" loading="lazy" style="object-position:50% 40%"></picture></div>
         <div class="tx">
-          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M3 21c-.667 -.667 3.262 -6.236 11.785 -16.709a3.5 3.5 0 1 1 5.078 4.791c-10.575 8.612 -16.196 12.585 -16.863 11.918z"/><path pathLength="1" d="M17.5 6.5l-1 1"/></svg>
-          <div><h3>Acupuntura</h3><p>Técnica para manejo de dores, redução do estresse e da ansiedade, promovendo bem-estar físico e mental.</p></div>
+          <h3>Massagem</h3>
+          <p>Massagem traz como benefícios alívio de dor e bem-estar, para que a rotina seja mais leve. Aqui no nosso espaço oferecemos massagem relaxante, massagem muscular, massagem com pedras quentes e drenagem linfática, todas em prol do alívio de dor e bem-estar.</p>
+          <div class="tags"><span>Relaxante</span><span>Muscular</span><span>Pedras quentes</span><span>Drenagem linfática</span></div>
         </div>
       </article>
-      <article class="card c-mass rv" style="--i:2">
+      <article class="card c-acu rv">
+        <div class="ph"><picture><source srcset="assets/img/acupuntura.webp" type="image/webp"><img src="assets/img/acupuntura.jpg" width="960" height="740" alt="Sessão de acupuntura no joelho de uma paciente" loading="lazy" style="object-position:40% 45%"></picture></div>
         <div class="tx">
-          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M4 17m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path pathLength="1" d="M9 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path pathLength="1" d="M4 22l4 -2v-3h12"/><path pathLength="1" d="M11 20h9"/><path pathLength="1" d="M8 14l3 -2l1 -4c3 1 3 4 3 6"/></svg>
-          <div><h3>Massagem</h3><p>Massagem traz como benefícios alívio de dor e bem-estar, para que a rotina seja mais leve. Aqui no nosso espaço oferecemos massagem relaxante, massagem muscular, massagem com pedras quentes e drenagem linfática, todas em prol do alívio de dor e bem-estar.</p></div>
+          <h3>Acupuntura</h3>
+          <p>Técnica para manejo de dores, redução do estresse e da ansiedade, promovendo bem-estar físico e mental.</p>
+          <div class="tags"><span>Dor</span><span>Estresse</span><span>Ansiedade</span></div>
+        </div>
+      </article>
+      <article class="card c-laser rv" style="--i:1">
+        <div class="ph"><picture><source srcset="assets/img/laser.webp" type="image/webp"><img src="assets/img/laser.jpg" width="960" height="900" alt="Aparelho de laserterapia em aplicação na perna" loading="lazy" style="object-position:50% 55%"></picture></div>
+        <div class="tx">
+          <h3>Laserterapia</h3>
+          <p>Recurso terapêutico que utiliza luz para estimular os processos naturais de reparação dos tecidos. Pode auxiliar no alívio da dor, na modulação da inflamação, na cicatrização e na recuperação funcional, conforme a indicação clínica.</p>
+          <p>É um tratamento não invasivo, indolor na maioria das aplicações, que complementa a fisioterapia para uma recuperação mais confortável e eficiente.</p>
+          <div class="tags"><span>Pós-cirúrgico estético</span><span>Pós-cirúrgico musculoesquelético</span><span>Úlceras de pressão</span><span>Lesões de pele</span><span>Tendinites</span><span>Inflamações</span></div>
         </div>
       </article>
     </div>
